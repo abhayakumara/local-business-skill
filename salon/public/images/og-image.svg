@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Maison Lumiere">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5f3d58"/>
+      <stop offset="1" stop-color="#8d5e82"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="983.9999999999999" cy="315" r="220" fill="#dcb35f" opacity="0.25"/>
+  <text x="80" y="289.8" font-family="Georgia, serif" font-size="80" font-weight="700" fill="#fff">Maison Lumi&#232;re</text>
+  <text x="84" y="357.8" font-family="Inter, sans-serif" font-size="34" fill="#f4e7c9" opacity="0.95">Hair &#183; Skin &#183; Spa</text>
+</svg>

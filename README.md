@@ -8,6 +8,11 @@ Deploy to Vercel with zero configuration. No database, no server.
 
 ![Saffron & Sage](public/images/og-image.svg)
 
+> **Looking for another industry?** A second starter built on the same
+> architecture — **Maison Lumière**, a hair salon & day spa — lives in
+> [`salon/`](salon/). Same component system and design philosophy, a calm
+> mauve/gold palette, and a services/team/booking content model.
+
 ---
 
 ## ✨ What's inside
