@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-label="Strength Foundations">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f24a16"/>
+      <stop offset="1" stop-color="#762012"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <g stroke="#fff" stroke-opacity="0.16" stroke-width="30" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M292 168 L400 252 L292 336"/>
+    <path d="M412 168 L520 252 L412 336"/>
+  </g>
+  <rect x="0" y="420" width="800" height="180" fill="#15130f" opacity="0.32"/>
+  <text x="40" y="566" font-family="Arial, sans-serif" font-size="51" font-weight="800" letter-spacing="1" fill="#fff" text-transform="uppercase">STRENGTH FOUNDATIONS</text>
+</svg>

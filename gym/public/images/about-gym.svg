@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000" role="img" aria-label="The Floor">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.6" y2="1">
+      <stop offset="0" stop-color="#2c2a25"/>
+      <stop offset="1" stop-color="#15130f"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.7" cy="0.2" r="0.8">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.20"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#bg)"/>
+  <rect width="800" height="1000" fill="url(#glow)"/>
+  <g fill="#15130f" opacity="0.22"><rect x="0" y="660" width="800" height="340"/></g>
+  <g stroke="#9eea1a" stroke-opacity="0.5" stroke-width="3">
+    <line x1="40" y1="936" x2="256" y2="936"/>
+  </g>
+  <text x="40" y="964" font-family="Arial, sans-serif" font-size="65" font-weight="800" letter-spacing="1" fill="#fff" opacity="0.96">THE FLOOR</text>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Northway Dental Studio">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1f6498"/>
+      <stop offset="1" stop-color="#2a7fb6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="983.9999999999999" cy="315" r="220" fill="#3fbf9c" opacity="0.28"/>
+  <text x="80" y="289.8" font-family="Georgia, serif" font-size="76" font-weight="700" fill="#fff">Northway Dental</text>
+  <text x="84" y="353.8" font-family="Inter, sans-serif" font-size="32" fill="#d2f5e9" opacity="0.95">Modern, Gentle Dentistry</text>
+</svg>

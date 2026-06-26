@@ -8,10 +8,19 @@ Deploy to Vercel with zero configuration. No database, no server.
 
 ![Saffron & Sage](public/images/og-image.svg)
 
-> **Looking for another industry?** A second starter built on the same
-> architecture — **Maison Lumière**, a hair salon & day spa — lives in
-> [`salon/`](salon/). Same component system and design philosophy, a calm
-> mauve/gold palette, and a services/team/booking content model.
+> **Looking for another industry?** This repo ships **four** starters built on
+> one shared architecture — same component system and design philosophy, a
+> different brand, palette, and content model for each vertical:
+>
+> | Starter | Industry | Palette | Industry-specific section |
+> |---------|----------|---------|---------------------------|
+> | *(root)* | Restaurant — **Saffron & Sage** | saffron / sage | Filterable menu |
+> | [`salon/`](salon/) | Salon & spa — **Maison Lumière** | mauve / gold | Team |
+> | [`dental/`](dental/) | Dental practice — **Northway Dental Studio** | sky / mint | Insurance & payment band |
+> | [`gym/`](gym/) | Gym & fitness — **Apex Athletic Club** | forge / volt | Membership pricing tiers |
+>
+> Each lives in its own folder as a self-contained, independently deployable
+> app. On Vercel, set the **root directory** to the matching folder.
 
 ---
 

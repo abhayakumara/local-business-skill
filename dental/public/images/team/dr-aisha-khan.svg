@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="800" viewBox="0 0 600 800" role="img" aria-label="Dr. Khan">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.5" y2="1">
+      <stop offset="0" stop-color="#71d8ba"/>
+      <stop offset="1" stop-color="#17826a"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="800" fill="url(#bg)"/>
+  <circle cx="300" cy="336" r="120" fill="#f3f8fb" opacity="0.94"/>
+  <path d="M120 800 C 120 576, 480 576, 480 800 Z" fill="#f3f8fb" opacity="0.94"/>
+  <text x="300" y="774" text-anchor="middle" font-family="Inter, sans-serif" font-size="40" font-weight="600" fill="#fff" opacity="0.9">Dr. Khan</text>
+</svg>
