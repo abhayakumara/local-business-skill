@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Saffron and Sage">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7f3a15"/>
+      <stop offset="1" stop-color="#d97915"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="983.9999999999999" cy="315" r="220" fill="#f3a847" opacity="0.25"/>
+  <text x="80" y="289.8" font-family="Georgia, serif" font-size="84" font-weight="700" fill="#fff">Saffron &amp; Sage</text>
+  <text x="84" y="359.8" font-family="Inter, sans-serif" font-size="34" fill="#fbf7f0" opacity="0.9">A Modern Indian Kitchen</text>
+</svg>

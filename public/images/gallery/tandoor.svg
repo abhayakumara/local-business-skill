@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="700" viewBox="0 0 900 700" role="img" aria-label="The Tandoor">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.6" y2="1">
+      <stop offset="0" stop-color="#f3a847"/>
+      <stop offset="1" stop-color="#bf5f0f"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.7" cy="0.2" r="0.8">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="900" height="700" fill="url(#bg)"/>
+  <rect width="900" height="700" fill="url(#glow)"/>
+  <g fill="#1c1917" opacity="0.12">
+    <rect x="0" y="434" width="900" height="266"/>
+  </g>
+  <g stroke="#fff" stroke-opacity="0.16" stroke-width="2">
+    <line x1="0" y1="210" x2="900" y2="154"/>
+    <line x1="0" y1="350" x2="900" y2="308"/>
+  </g>
+  <text x="40" y="662" font-family="Georgia, serif" font-size="42" font-weight="600" fill="#fff" opacity="0.96">The Tandoor</text>
+</svg>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-label="Saffron Biryani">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e9ad53"/>
+      <stop offset="1" stop-color="#9c4711"/>
+    </linearGradient>
+    <radialGradient id="plate" cx="0.5" cy="0.42" r="0.6">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.96"/>
+      <stop offset="1" stop-color="#fbf7f0" stop-opacity="0.9"/>
+    </radialGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <circle cx="400" cy="284" r="186" fill="#1c1917" opacity="0.18" filter="url(#soft)"/>
+  <circle cx="400" cy="276" r="180" fill="url(#plate)"/>
+  <circle cx="400" cy="276" r="129.6" fill="none" stroke="#9c4711" stroke-opacity="0.18" stroke-width="2"/>
+  <g transform="rotate(81 400 276)">
+    <ellipse cx="360.4" cy="258" rx="75.6" ry="61.2" fill="#9c4711" opacity="0.85"/>
+    <ellipse cx="446.8" cy="301.2" rx="64.8" ry="54" fill="#e9ad53" opacity="0.95"/>
+    <circle cx="409" cy="229.2" r="28.8" fill="#fff" opacity="0.7"/>
+    <circle cx="346" cy="326.4" r="18" fill="#fff" opacity="0.55"/>
+  </g>
+  <text x="400" y="566" text-anchor="middle" font-family="Georgia, serif" font-size="42" font-weight="600" fill="#fff" opacity="0.96">Saffron Biryani</text>
+</svg>

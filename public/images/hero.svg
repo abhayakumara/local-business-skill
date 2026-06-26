@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-label="Saffron and Sage dining">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7f3a15"/>
+      <stop offset="0.5" stop-color="#bf5f0f"/>
+      <stop offset="1" stop-color="#683115"/>
+    </linearGradient>
+    <radialGradient id="g1" cx="0.3" cy="0.25" r="0.6">
+      <stop offset="0" stop-color="#f3a847" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#f3a847" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="g2" cx="0.8" cy="0.8" r="0.5">
+      <stop offset="0" stop-color="#557a4b" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#557a4b" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+  <rect width="1920" height="1080" fill="url(#g1)"/>
+  <rect width="1920" height="1080" fill="url(#g2)"/>
+  <g opacity="0.5" fill="#fbf7f0">
+    <circle cx="384" cy="756" r="120" opacity="0.08"/>
+    <circle cx="1440" cy="432" r="180" opacity="0.06"/>
+  </g>
+</svg>
