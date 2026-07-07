@@ -1,16 +1,25 @@
-// Shared content types. Editing content/*.ts is type-checked against these,
-// so a non-technical editor gets guard rails while personalizing the site.
+// Shared content types for every demo in the showcase. Editing content/*.ts is
+// type-checked against these, so a non-technical editor gets guard rails while
+// personalizing a site.
 
 export interface BusinessHours {
   day: string;
-  open: string; // e.g. "12:00 PM" — or "Closed"
+  open: string; // e.g. "9:00 AM" — or "Closed"
   close: string;
 }
 
 export interface SocialLink {
   label: string;
   href: string;
-  icon: 'instagram' | 'facebook' | 'whatsapp' | 'tripadvisor';
+  icon:
+    | 'instagram'
+    | 'facebook'
+    | 'whatsapp'
+    | 'tripadvisor'
+    | 'pinterest'
+    | 'linkedin'
+    | 'youtube'
+    | 'tiktok';
 }
 
 export interface Business {
@@ -18,11 +27,15 @@ export interface Business {
   shortName: string;
   tagline: string;
   description: string;
-  cuisine: string;
+  /** Restaurant demos: cuisine style, e.g. "Modern Indian". */
+  cuisine?: string;
+  /** Service demos: business category, e.g. "Dental practice". */
+  category?: string;
   priceRange: string; // e.g. "$$"
   phone: string;
   email: string;
   reservationsUrl?: string;
+  bookingUrl?: string;
   address: {
     street: string;
     city: string;
@@ -35,15 +48,17 @@ export interface Business {
   geo: { latitude: number; longitude: number };
   hours: BusinessHours[];
   social: SocialLink[];
-  url: string; // canonical production URL
+  url: string; // canonical URL of this demo
 }
+
+/* ── Restaurant ─────────────────────────────────────────────────────────── */
 
 export interface Dish {
   id: string;
   name: string;
   description: string;
   price: string;
-  /** Image lives in /public/images/menu and is named after the dish. */
+  /** Image lives in /public/images/restaurant/menu, named after the dish. */
   image: string;
   imageAlt: string;
   category: string;
@@ -57,6 +72,89 @@ export interface MenuCategory {
   name: string;
   description: string;
 }
+
+/* ── Salon & dental ─────────────────────────────────────────────────────── */
+
+export interface Service {
+  id: string;
+  name: string;
+  description: string;
+  price: string;
+  duration: string; // e.g. "45 min"
+  image: string;
+  imageAlt: string;
+  category: string;
+  isSignature?: boolean;
+}
+
+export interface ServiceCategory {
+  id: string;
+  name: string;
+  description: string;
+}
+
+export interface TeamMember {
+  id: string;
+  name: string;
+  role: string;
+  specialty: string;
+  image: string;
+  imageAlt: string;
+}
+
+export interface InsurancePlan {
+  id: string;
+  name: string;
+}
+
+export interface InsuranceInfo {
+  heading: string;
+  description: string;
+  plans: InsurancePlan[];
+  membershipNote: string;
+}
+
+/* ── Gym ────────────────────────────────────────────────────────────────── */
+
+export interface Program {
+  id: string;
+  name: string;
+  description: string;
+  level: 'All levels' | 'Beginner' | 'Intermediate' | 'Advanced';
+  duration: string; // class length, e.g. "45 min"
+  image: string;
+  imageAlt: string;
+  category: string;
+  isSignature?: boolean;
+}
+
+export interface ProgramCategory {
+  id: string;
+  name: string;
+  description: string;
+}
+
+export interface Trainer {
+  id: string;
+  name: string;
+  role: string;
+  specialty: string;
+  image: string;
+  imageAlt: string;
+}
+
+export interface MembershipPlan {
+  id: string;
+  name: string;
+  price: string;
+  cadence: string; // e.g. "per month"
+  description: string;
+  perks: string[];
+  isFeatured?: boolean;
+  ctaLabel: string;
+}
+
+/* ── Shared sections ────────────────────────────────────────────────────── */
 
 export interface GalleryImage {
   id: string;

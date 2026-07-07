@@ -1,127 +1,114 @@
-# Saffron & Sage — Premium Restaurant Website
+# Lumen Studio — Local Business Website Showcase
 
-A production-ready, content-driven marketing website for a local restaurant.
-Built as a **reusable starter**: the design system, components, and animations
-stay put while everything business-specific lives in editable content files.
+One Next.js application, five experiences: a premium **agency landing page**
+plus a complete, production-ready **demo website for each industry** — all
+served from a single deployment, switchable by URL.
 
-Deploy to Vercel with zero configuration. No database, no server.
+Built to win clients during a live demo: open `/`, let them pick their
+industry, and show them their future website.
 
-![Saffron & Sage](public/images/og-image.svg)
+| Route | What it is | Brand | Signature section |
+|-------|------------|-------|-------------------|
+| `/` | Agency landing page | **Lumen Studio** — dark, aurora gradients, interactive 3D hero | Live demo gallery |
+| `/restaurant` | Restaurant demo | **Saffron & Sage** — saffron / sage, Cormorant | Filterable menu |
+| `/salon` | Salon & spa demo | **Maison Lumière** — mauve / gold, Cormorant | Treatment menu + team |
+| `/dental` | Dental practice demo | **Northway Dental Studio** — sky / mint, Fraunces | Insurance & payment band |
+| `/gym` | Gym & fitness demo | **Apex Athletic Club** — forge / volt, Oswald | Membership pricing tiers |
 
-> **Looking for another industry?** This repo ships **four** starters built on
-> one shared architecture — same component system and design philosophy, a
-> different brand, palette, and content model for each vertical:
->
-> | Starter | Industry | Palette | Industry-specific section |
-> |---------|----------|---------|---------------------------|
-> | *(root)* | Restaurant — **Saffron & Sage** | saffron / sage | Filterable menu |
-> | [`salon/`](salon/) | Salon & spa — **Maison Lumière** | mauve / gold | Team |
-> | [`dental/`](dental/) | Dental practice — **Northway Dental Studio** | sky / mint | Insurance & payment band |
-> | [`gym/`](gym/) | Gym & fitness — **Apex Athletic Club** | forge / volt | Membership pricing tiers |
->
-> Each lives in its own folder as a self-contained, independently deployable
-> app. On Vercel, set the **root directory** to the matching folder.
+A floating showcase bar on every demo lets prospects hop between industries
+(and back to the agency page) without touching the URL bar.
 
 ---
 
 ## ✨ What's inside
 
-- **Next.js 14** (App Router) + **TypeScript**
-- **Tailwind CSS** design system (warm saffron / sage / cream palette)
-- **Framer Motion** scroll reveals, animated menu tabs, testimonial carousel
-- Fully **responsive**, **accessible** (keyboard nav, focus rings, ARIA, reduced-motion)
-- **SEO**: metadata, Open Graph, JSON-LD (`Restaurant` + `FAQPage`), `sitemap.xml`, `robots.txt`
-- **Statically prerendered** — every route is HTML, ~138 kB first load
-- Working reservation form (composes an email — no backend required)
-
-### Sections
-Hero · About · Filterable Menu · Gallery · Testimonials · Reservation · Visit/Map · FAQ · Footer
-
----
+- **Next.js 14** (App Router) + **TypeScript**, fully statically prerendered
+- **Tailwind CSS** — one design system, five brands via CSS-variable theming
+- **Framer Motion** — scroll reveals, staggered headlines, magnetic buttons,
+  tilt cards, animated counters, cinematic hero push-ins, marquees
+- **React Three Fiber** — interactive 3D hero on the landing page
+  (lazy-loaded, WebGL-gated, wrapped in an error boundary, skipped for
+  `prefers-reduced-motion`)
+- **SEO** — per-route metadata + Open Graph, industry JSON-LD
+  (`Restaurant`, `BeautySalon`, `Dentist`, `ExerciseGym`,
+  `ProfessionalService`, `FAQPage`), `sitemap.xml`, `robots.txt`
+- **Accessible** — keyboard nav, visible focus rings, ARIA labels, skip link,
+  reduced-motion support throughout
+- Working forms with **zero backend** (they compose an email) — swap in a
+  form service later without touching markup
 
 ## 🚀 Getting started
 
 ```bash
 npm install
 npm run dev      # http://localhost:3000
-npm run build    # production build
+npm run build    # production build (all routes static)
+npm run lint
 ```
 
----
-
-## 🖊️ Personalize for a new business
-
-**You only edit `/content` and swap images — no component code.**
-
-| File | What it controls |
-|------|------------------|
-| `content/business.ts` | Name, tagline, hours, address, phone, email, socials, map, geo |
-| `content/menu.ts` | Menu categories + dishes (name, price, image, veg/spice, signature) |
-| `content/gallery.ts` | Gallery photos |
-| `content/testimonials.ts` | Guest reviews + star ratings |
-| `content/faqs.ts` | Frequently asked questions |
-
-Every field is **type-checked** against `lib/types.ts`, so you get autocomplete
-and guard rails while editing.
-
-### Swapping in real images
-Images map **1:1** to their content by filename. The demo ships branded SVG
-placeholders; replace them with real photography (ideally `.webp`) and update
-the path in the content file.
-
-```
-public/images/
-  menu/      paneer-butter-masala.svg  →  paneer-butter-masala.webp
-  gallery/   dining-room.svg           →  dining-room.webp
-  hero.svg, about-chef.svg, og-image.svg
-```
-
-> Keep the dish↔file naming convention (`Masala Dosa → masala-dosa.webp`).
-> It keeps the content readable and replacements unambiguous.
-
-Regenerate the placeholder set any time with:
-
-```bash
-node scripts/generate-placeholders.mjs
-```
-
----
-
-## 🍴 Reusing for another restaurant
-
-1. Duplicate the repo.
-2. Rewrite the five `/content` files with the new brand.
-3. Drop in real photos under `public/images`.
-4. (Optional) Re-theme by editing the `saffron` / `sage` colors in
-   `tailwind.config.ts`.
-5. Push to Vercel.
-
-The application logic never needs to change.
-
----
-
-## ☁️ Deploy to Vercel
+## ☁️ Deploy to Vercel — one project, every demo
 
 1. Push this repo to GitHub.
-2. Import it at [vercel.com/new](https://vercel.com/new).
-3. Framework preset **Next.js** is auto-detected — accept the defaults and deploy.
+2. Import it at [vercel.com/new](https://vercel.com/new) — the Next.js preset
+   is auto-detected. **Accept the defaults.** No environment variables, no
+   database, no extra config.
+3. Every route deploys together: `your-app.vercel.app/`, `/restaurant`,
+   `/salon`, `/dental`, `/gym`.
 
-No environment variables required.
-
----
+Optionally set `NEXT_PUBLIC_SITE_URL` to your production origin so canonical
+URLs, the sitemap, and JSON-LD reference the right domain (defaults live in
+`lib/site.ts`).
 
 ## 📁 Structure
 
 ```
-app/            layout, page, globals, sitemap, robots, favicon
-components/      section components (Hero, Menu, Gallery, …)
-components/ui/   Reveal, SectionHeading, icons (no icon library)
-content/         ← personalize here
-lib/types.ts     content type definitions
-public/images/   placeholder assets (replace with real photos)
-scripts/         placeholder image generator
+app/
+  layout.tsx            root layout (agency metadata, fonts, skip link)
+  page.tsx              agency landing page
+  globals.css           one stylesheet, five theme scopes (.theme-*)
+  restaurant|salon|dental|gym/
+    layout.tsx          per-demo theme wrapper, font, metadata, JSON-LD
+    page.tsx            the demo one-pager
+components/
+  agency/               landing page sections (Hero, Showcase, Pricing, …)
+  restaurant|salon|dental|gym/   demo sections
+  ui/                   shared primitives: Reveal, SectionHeading, Magnetic,
+                        TiltCard, AnimatedCounter, Marquee, ShowcaseBar,
+                        social icons
+content/
+  agency.ts             ← landing page copy, demos, pricing, FAQs
+  restaurant|salon|dental|gym/  ← per-demo business content (personalize here)
+lib/
+  types.ts              content type definitions (guard rails for editors)
+  site.ts               deployed origin (NEXT_PUBLIC_SITE_URL override)
+public/images/<demo>/   1:1 named placeholder art (drop in real .webp photos)
+scripts/placeholders/   regenerate any demo's placeholder art
+```
+
+## 🎨 How the theming works
+
+Each demo route wraps its page in a `.theme-*` class that sets four CSS
+variables — ink (text), brand (accent), surface (background), and the display
+font. Shared components (`SectionHeading`, `.btn-primary`, `.field`, shadows,
+focus rings) resolve those variables, so the same component renders on-brand
+inside every demo. Adding a sixth vertical means: new theme block in
+`globals.css`, new palette in `tailwind.config.ts`, new `content/<vertical>/`
+folder, new route — the component library comes for free.
+
+## 🖊️ Personalizing a demo for a real client
+
+**Edit `/content/<demo>` and swap images — no component code.**
+
+Every field is type-checked against `lib/types.ts`. Images map 1:1 to content
+by filename (`Masala Dosa → masala-dosa.webp`); the shipped SVG placeholders
+are drop-in replaceable with real photography. Regenerate placeholder art any
+time:
+
+```bash
+node scripts/placeholders/restaurant.mjs   # or salon / dental / gym / agency
 ```
 
 ---
 
-Built as a client-facing sales demo. Make it yours.
+Built as a client-facing sales tool. Open the landing page, share your
+screen, and let the demos close the deal.

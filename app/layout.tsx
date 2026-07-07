@@ -1,68 +1,68 @@
 import type { Metadata, Viewport } from 'next';
-import { Cormorant_Garamond, Inter } from 'next/font/google';
-import { business } from '@/content';
-import { StructuredData } from '@/components/StructuredData';
+import { Inter, Space_Grotesk } from 'next/font/google';
+import { siteUrl } from '@/lib/site';
 import './globals.css';
-
-const display = Cormorant_Garamond({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  variable: '--font-display',
-  display: 'swap',
-});
 
 const body = Inter({
   subsets: ['latin'],
-  variable: '--font-body',
+  variable: '--font-body-inter',
   display: 'swap',
 });
 
-const description = business.description;
+const display = Space_Grotesk({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-display-agency',
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
-  metadataBase: new URL(business.url),
+  metadataBase: new URL(siteUrl),
   title: {
-    default: `${business.name} — ${business.tagline}`,
-    template: `%s · ${business.name}`,
+    default: 'Lumen Studio — Websites that win local customers',
+    template: '%s · Lumen Studio',
   },
-  description,
+  description:
+    'Lumen Studio designs premium, conversion-focused websites for local businesses — restaurants, salons, dental practices, gyms and more. Explore live demos of our work.',
   keywords: [
-    business.cuisine,
-    'restaurant',
-    business.address.city,
-    'dining',
-    'reservations',
-    business.name,
+    'web design agency',
+    'local business websites',
+    'restaurant website design',
+    'dental website design',
+    'salon website design',
+    'gym website design',
   ],
-  authors: [{ name: business.name }],
+  authors: [{ name: 'Lumen Studio' }],
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: business.url,
-    siteName: business.name,
-    title: `${business.name} — ${business.tagline}`,
-    description,
+    url: siteUrl,
+    siteName: 'Lumen Studio',
+    title: 'Lumen Studio — Websites that win local customers',
+    description:
+      'Premium, conversion-focused websites for local businesses. Explore live demos for restaurants, salons, dental practices and gyms.',
     images: [
       {
-        url: '/images/og-image.svg',
+        url: '/images/agency/og-image.svg',
         width: 1200,
         height: 630,
-        alt: `${business.name} — ${business.tagline}`,
+        alt: 'Lumen Studio — Websites that win local customers',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: `${business.name} — ${business.tagline}`,
-    description,
-    images: ['/images/og-image.svg'],
+    title: 'Lumen Studio — Websites that win local customers',
+    description:
+      'Premium, conversion-focused websites for local businesses. Explore live demos.',
+    images: ['/images/agency/og-image.svg'],
   },
-  alternates: { canonical: business.url },
+  alternates: { canonical: '/' },
   robots: { index: true, follow: true },
 };
 
 export const viewport: Viewport = {
-  themeColor: '#d97915',
+  themeColor: '#07070d',
   width: 'device-width',
   initialScale: 1,
 };
@@ -73,12 +73,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${display.variable} ${body.variable}`}>
+    <html lang="en" className={`${body.variable} ${display.variable}`}>
       <body>
-        <StructuredData />
         <a
           href="#main"
-          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-saffron-500 focus:px-5 focus:py-2 focus:text-sm focus:font-semibold focus:text-white"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-zinc-950 focus:px-5 focus:py-2 focus:text-sm focus:font-semibold focus:text-white focus:ring-2 focus:ring-violet-400"
         >
           Skip to content
         </a>

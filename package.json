@@ -1,8 +1,8 @@
 {
-  "name": "saffron-and-sage",
+  "name": "lumen-studio-showcase",
   "version": "1.0.0",
   "private": true,
-  "description": "Premium restaurant website starter — content-driven, Vercel-ready.",
+  "description": "Premium local-business website showcase — one Next.js app, an agency landing page, and a live demo per industry.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -13,7 +13,9 @@
     "framer-motion": "^11.3.19",
     "next": "14.2.5",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "three": "^0.167.1",
+    "@react-three/fiber": "^8.16.8"
   },
   "devDependencies": {
     "@types/node": "^20.14.12",
@@ -24,6 +26,7 @@
     "eslint-config-next": "14.2.5",
     "postcss": "^8.4.40",
     "tailwindcss": "^3.4.7",
-    "typescript": "^5.5.4"
+    "typescript": "^5.5.4",
+    "@types/three": "^0.167.2"
   }
 }

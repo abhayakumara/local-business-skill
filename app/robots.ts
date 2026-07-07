@@ -1,13 +1,9 @@
 import type { MetadataRoute } from 'next';
-import { business } from '@/content';
+import { siteUrl } from '@/lib/site';
 
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: {
-      userAgent: '*',
-      allow: '/',
-    },
-    sitemap: `${business.url}/sitemap.xml`,
-    host: business.url,
+    rules: { userAgent: '*', allow: '/' },
+    sitemap: `${siteUrl}/sitemap.xml`,
   };
 }
