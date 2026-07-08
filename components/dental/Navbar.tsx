@@ -6,6 +6,7 @@ import { PhoneIcon } from './icons';
 
 const links = [
   { href: '#about', label: 'About' },
+  { href: '#journey', label: 'First Visit' },
   { href: '#services', label: 'Services' },
   { href: '#team', label: 'Team' },
   { href: '#gallery', label: 'Gallery' },
@@ -35,9 +36,7 @@ export function Navbar() {
       >
         <a
           href="#main"
-          className={`heading-display text-xl font-bold tracking-tight transition-colors ${
-            scrolled ? 'text-ink' : 'text-white drop-shadow'
-          }`}
+          className={`heading-display text-xl font-bold tracking-tight transition-colors text-ink`}
         >
           {business.shortName}
         </a>
@@ -47,9 +46,7 @@ export function Navbar() {
             <li key={l.href}>
               <a
                 href={l.href}
-                className={`text-sm font-medium transition-colors hover:text-mint-500 ${
-                  scrolled ? 'text-ink/80' : 'text-white/90 drop-shadow'
-                }`}
+                className={`text-sm font-medium transition-colors hover:text-mint-500 text-ink/80`}
               >
                 {l.label}
               </a>
@@ -65,7 +62,7 @@ export function Navbar() {
         <div className="flex items-center gap-3 md:hidden">
           <a
             href={`tel:${business.phone.replace(/[^\d+]/g, '')}`}
-            className={`rounded-full p-2 ${scrolled ? 'text-ink' : 'text-white'}`}
+            className={`rounded-full p-2 text-ink`}
             aria-label={`Call ${business.name}`}
           >
             <PhoneIcon />
@@ -73,7 +70,7 @@ export function Navbar() {
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
-            className={`rounded-full p-2 ${scrolled ? 'text-ink' : 'text-white'}`}
+            className={`rounded-full p-2 text-ink`}
             aria-expanded={open}
             aria-controls="mobile-menu"
             aria-label="Toggle menu"

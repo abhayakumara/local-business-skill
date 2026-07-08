@@ -1,22 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="700" viewBox="0 0 900 700" role="img" aria-label="Terrace Seating">
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="700" viewBox="0 0 900 700" role="img" aria-label="The Terrace">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="0.6" y2="1">
-      <stop offset="0" stop-color="#e9ad53"/>
-      <stop offset="1" stop-color="#557a4b"/>
+    <linearGradient id="bg39" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#344d30"/><stop offset="0.55" stop-color="#557a4b"/><stop offset="1" stop-color="#344d30"/>
     </linearGradient>
-    <radialGradient id="glow" cx="0.7" cy="0.2" r="0.8">
-      <stop offset="0" stop-color="#fff" stop-opacity="0.35"/>
-      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    <radialGradient id="glow39" cx="0.68" cy="0.3" r="0.75">
+      <stop offset="0" stop-color="#c2d4ba" stop-opacity="0.55"/><stop offset="1" stop-color="#c2d4ba" stop-opacity="0"/>
     </radialGradient>
-  </defs>
-  <rect width="900" height="700" fill="url(#bg)"/>
-  <rect width="900" height="700" fill="url(#glow)"/>
-  <g fill="#1c1917" opacity="0.12">
-    <rect x="0" y="434" width="900" height="266"/>
+    <radialGradient id="vig39" cx="0.5" cy="0.5" r="0.9">
+      <stop offset="0.6" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#241205" stop-opacity="0.45"/>
+    </radialGradient>
+    <filter id="grain39"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" result="n"/><feColorMatrix in="n" type="saturate" values="0"/><feComponentTransfer><feFuncA type="linear" slope="0.06"/></feComponentTransfer><feComposite operator="over" in2="SourceGraphic"/></filter>
+  </defs><defs><linearGradient id="fade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#241205" stop-opacity="0"/><stop offset="1" stop-color="#241205" stop-opacity="0.72"/></linearGradient></defs>
+  <rect width="900" height="700" fill="url(#bg39)"/>
+  <rect width="900" height="700" fill="url(#glow39)"/>
+  <g fill="none" stroke="#c2d4ba" stroke-opacity="0.35" stroke-width="2.5">
+    <path d="M108 700 v-294 a81 81 0 0 1 162 0 V700"/>
+    <path d="M342 700 v-364 a90 90 0 0 1 180 0 V700"/>
+    <path d="M594 700 v-294 a81 81 0 0 1 162 0 V700"/>
+  </g><g>
+    <circle cx="198" cy="140" r="14" fill="#c2d4ba" opacity="0.85"/>
+    <circle cx="450" cy="91" r="10" fill="#c2d4ba" opacity="0.6"/>
+    <circle cx="720" cy="154" r="12" fill="#c2d4ba" opacity="0.75"/>
+    <line x1="198" y1="0" x2="198" y2="126" stroke="#c2d4ba" stroke-opacity="0.4"/>
+    <line x1="450" y1="0" x2="450" y2="81" stroke="#c2d4ba" stroke-opacity="0.4"/>
+    <line x1="720" y1="0" x2="720" y2="142" stroke="#c2d4ba" stroke-opacity="0.4"/>
   </g>
-  <g stroke="#fff" stroke-opacity="0.16" stroke-width="2">
-    <line x1="0" y1="210" x2="900" y2="154"/>
-    <line x1="0" y1="350" x2="900" y2="308"/>
+  <circle cx="403" cy="412" r="3.0" fill="#ffffff" opacity="0.35"/><circle cx="101" cy="25" r="2.0" fill="#ffffff" opacity="0.35"/><circle cx="115" cy="386" r="3.5" fill="#ffffff" opacity="0.35"/><circle cx="842" cy="155" r="1.5" fill="#ffffff" opacity="0.35"/><circle cx="893" cy="46" r="3.0" fill="#ffffff" opacity="0.35"/><circle cx="94" cy="168" r="2.5" fill="#ffffff" opacity="0.35"/><circle cx="36" cy="122" r="1.5" fill="#ffffff" opacity="0.35"/><circle cx="792" cy="500" r="1.5" fill="#ffffff" opacity="0.35"/><circle cx="511" cy="256" r="2.5" fill="#ffffff" opacity="0.35"/><circle cx="684" cy="420" r="3.0" fill="#ffffff" opacity="0.35"/>
+  <rect width="900" height="700" fill="url(#vig39)"/>
+  <g>
+    <rect x="0" y="504" width="900" height="196.00000000000003" fill="url(#fade)"/>
+    <rect x="36" y="608" width="26" height="3" rx="1.5" fill="#f2cd8f"/>
+    <text x="36" y="656" font-family="Georgia, serif" font-size="53" font-weight="600" fill="#fff8ef">The Terrace</text>
+    <text x="36" y="682" font-family="Arial, sans-serif" font-size="22" letter-spacing="2.5" fill="#f2cd8f" opacity="0.9">UNDER THE STARS</text>
   </g>
-  <text x="40" y="662" font-family="Georgia, serif" font-size="42" font-weight="600" fill="#fff" opacity="0.96">Terrace Seating</text>
 </svg>

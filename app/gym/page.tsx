@@ -3,6 +3,7 @@ import { Hero } from '@/components/gym/Hero';
 import { About } from '@/components/gym/About';
 import { Programs } from '@/components/gym/Programs';
 import { Trainers } from '@/components/gym/Trainers';
+import { Schedule } from '@/components/gym/Schedule';
 import { Membership } from '@/components/gym/Membership';
 import { Gallery } from '@/components/gym/Gallery';
 import { Testimonials } from '@/components/gym/Testimonials';
@@ -20,6 +21,7 @@ export default function Home() {
         <About />
         <Programs />
         <Trainers />
+        <Schedule />
         <Membership />
         <Gallery />
         <Testimonials />

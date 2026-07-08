@@ -12,7 +12,7 @@ export function StructuredData() {
     email: agency.email,
     telephone: agency.phone,
     image: `${siteUrl}/images/agency/og-image.svg`,
-    areaServed: 'United States',
+    areaServed: 'India',
     knowsAbout: [
       'Web design',
       'Local SEO',

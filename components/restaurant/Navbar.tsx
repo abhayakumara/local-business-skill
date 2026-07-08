@@ -6,6 +6,7 @@ import { PhoneIcon } from './icons';
 
 const links = [
   { href: '#about', label: 'About' },
+  { href: '#signatures', label: 'Signatures' },
   { href: '#menu', label: 'Menu' },
   { href: '#gallery', label: 'Gallery' },
   { href: '#visit', label: 'Visit' },

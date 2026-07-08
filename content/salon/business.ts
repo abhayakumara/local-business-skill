@@ -15,22 +15,22 @@ export const business: Business = {
   description:
     'An intimate hair and skin sanctuary where master stylists and therapists craft a calm, considered ritual around you — beauty, unhurried.',
   category: 'Hair Salon & Day Spa',
-  priceRange: '$$$',
-  phone: '+1 (415) 555-0143',
+  priceRange: '₹₹₹',
+  phone: '+91 98200 40143',
   email: 'hello@maisonlumiere.com',
   bookingUrl: '#book',
   address: {
-    street: '54 Linden Court',
-    city: 'San Francisco',
-    region: 'CA',
-    postalCode: '94102',
-    country: 'USA',
+    street: '54 Hill Road, Bandra West',
+    city: 'Mumbai',
+    region: 'Maharashtra',
+    postalCode: '400050',
+    country: 'India',
     mapsEmbedUrl:
-      'https://www.google.com/maps?q=54+Linden+Court+San+Francisco&output=embed',
+      'https://www.google.com/maps?q=Hill+Road+Bandra+West+Mumbai&output=embed',
     directionsUrl:
-      'https://www.google.com/maps/dir/?api=1&destination=54+Linden+Court+San+Francisco+CA+94102',
+      'https://www.google.com/maps/dir/?api=1&destination=Hill+Road+Bandra+West+Mumbai',
   },
-  geo: { latitude: 37.7762, longitude: -122.4244 },
+  geo: { latitude: 19.0596, longitude: 72.8295 },
   hours: [
     { day: 'Monday', open: 'Closed', close: '' },
     { day: 'Tuesday', open: '9:00 AM', close: '7:00 PM' },

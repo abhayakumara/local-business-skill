@@ -1,26 +1,42 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-label="Masala Dosa">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#d97915"/>
-      <stop offset="1" stop-color="#683115"/>
+    <linearGradient id="bg9" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#344d30"/><stop offset="0.55" stop-color="#557a4b"/><stop offset="1" stop-color="#344d30"/>
     </linearGradient>
-    <radialGradient id="plate" cx="0.5" cy="0.42" r="0.6">
-      <stop offset="0" stop-color="#fff" stop-opacity="0.96"/>
-      <stop offset="1" stop-color="#fbf7f0" stop-opacity="0.9"/>
+    <radialGradient id="glow9" cx="0.68" cy="0.3" r="0.75">
+      <stop offset="0" stop-color="#c2d4ba" stop-opacity="0.55"/><stop offset="1" stop-color="#c2d4ba" stop-opacity="0"/>
     </radialGradient>
-    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="6"/>
-    </filter>
-  </defs>
-  <rect width="800" height="600" fill="url(#bg)"/>
-  <circle cx="400" cy="284" r="186" fill="#1c1917" opacity="0.18" filter="url(#soft)"/>
-  <circle cx="400" cy="276" r="180" fill="url(#plate)"/>
-  <circle cx="400" cy="276" r="129.6" fill="none" stroke="#683115" stroke-opacity="0.18" stroke-width="2"/>
-  <g transform="rotate(258 400 276)">
-    <ellipse cx="360.4" cy="258" rx="75.6" ry="61.2" fill="#683115" opacity="0.85"/>
-    <ellipse cx="446.8" cy="301.2" rx="64.8" ry="54" fill="#d97915" opacity="0.95"/>
-    <circle cx="409" cy="229.2" r="28.8" fill="#fff" opacity="0.7"/>
-    <circle cx="346" cy="326.4" r="18" fill="#fff" opacity="0.55"/>
+    <radialGradient id="vig9" cx="0.5" cy="0.5" r="0.9">
+      <stop offset="0.6" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#241205" stop-opacity="0.45"/>
+    </radialGradient>
+    <filter id="grain9"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" result="n"/><feColorMatrix in="n" type="saturate" values="0"/><feComponentTransfer><feFuncA type="linear" slope="0.06"/></feComponentTransfer><feComposite operator="over" in2="SourceGraphic"/></filter>
+  </defs><defs><linearGradient id="fade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#241205" stop-opacity="0"/><stop offset="1" stop-color="#241205" stop-opacity="0.72"/></linearGradient></defs>
+  <rect width="800" height="600" fill="url(#bg9)"/>
+  <rect width="800" height="600" fill="url(#glow9)"/>
+  <circle cx="134" cy="392" r="3.5" fill="#c2d4ba" opacity="0.35"/><circle cx="525" cy="205" r="3.5" fill="#c2d4ba" opacity="0.35"/><circle cx="141" cy="299" r="3.0" fill="#c2d4ba" opacity="0.35"/><circle cx="288" cy="130" r="2.5" fill="#c2d4ba" opacity="0.35"/><circle cx="333" cy="187" r="1.5" fill="#c2d4ba" opacity="0.35"/><circle cx="410" cy="40" r="3.5" fill="#c2d4ba" opacity="0.35"/><circle cx="378" cy="18" r="2.0" fill="#c2d4ba" opacity="0.35"/><circle cx="314" cy="191" r="1.5" fill="#c2d4ba" opacity="0.35"/><circle cx="141" cy="432" r="1.5" fill="#c2d4ba" opacity="0.35"/><circle cx="358" cy="446" r="1.5" fill="#c2d4ba" opacity="0.35"/><circle cx="576" cy="292" r="3.5" fill="#c2d4ba" opacity="0.35"/><circle cx="128" cy="346" r="2.5" fill="#c2d4ba" opacity="0.35"/><circle cx="346" cy="119" r="1.5" fill="#c2d4ba" opacity="0.35"/><circle cx="602" cy="50" r="1.5" fill="#c2d4ba" opacity="0.35"/>
+  <g>
+    <circle cx="496" cy="240" r="156" fill="#fff" opacity="0.14"/>
+    <circle cx="496" cy="240" r="127.91999999999999" fill="none" stroke="#c2d4ba" stroke-opacity="0.6" stroke-width="2"/>
+    <circle cx="496" cy="240" r="90.47999999999999" fill="#557a4b" opacity="0.85"/>
+    <circle cx="496" cy="240" r="90.47999999999999" fill="none" stroke="#fff" stroke-opacity="0.25" stroke-width="3"/>
+    <path d="M449.2 232.2 q 46.8 -54.599999999999994 93.6 0 q -46.8 54.599999999999994 -93.6 0 Z" fill="#c2d4ba" opacity="0.85"/>
+    <circle cx="477.28" cy="274.32" r="9.36" fill="#fff" opacity="0.7"/>
+    <circle cx="527.2" cy="268.08" r="7.02" fill="#fff" opacity="0.55"/>
   </g>
-  <text x="400" y="566" text-anchor="middle" font-family="Georgia, serif" font-size="42" font-weight="600" fill="#fff" opacity="0.96">Masala Dosa</text>
+  <g stroke="#fff" stroke-opacity="0.5" stroke-width="3" fill="none" stroke-linecap="round">
+    <path d="M474 78 c -8 -18, 8 -26, 0 -44"/>
+    <path d="M496 72 c -8 -20, 8 -28, 0 -48"/>
+    <path d="M518 78 c -8 -18, 8 -26, 0 -44"/>
+  </g>
+  <g fill="#e9ad53" opacity="0.5">
+    <path d="M96 372 q 22.5 -37.5 0 -72.5 q -22.5 35 0 72.5 Z"/>
+    <path d="M121 379.5 q 32.5 -25 20 -65 q -32.5 25 -20 65 Z"/>
+  </g>
+  <rect width="800" height="600" fill="url(#vig9)"/>
+  <g>
+    <rect x="0" y="432" width="800" height="168.00000000000003" fill="url(#fade)"/>
+    <rect x="36" y="508" width="26" height="3" rx="1.5" fill="#f2cd8f"/>
+    <text x="36" y="556" font-family="Georgia, serif" font-size="45" font-weight="600" fill="#fff8ef">Masala Dosa</text>
+    <text x="36" y="582" font-family="Arial, sans-serif" font-size="19" letter-spacing="2.5" fill="#f2cd8f" opacity="0.9">CRISP &amp; GOLDEN</text>
+  </g>
 </svg>

@@ -1,19 +1,43 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000" role="img" aria-label="The Floor">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="0.6" y2="1">
-      <stop offset="0" stop-color="#2c2a25"/>
-      <stop offset="1" stop-color="#15130f"/>
+    <linearGradient id="bg84" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#932312"/><stop offset="0.55" stop-color="#f24a16"/><stop offset="1" stop-color="#932312"/>
     </linearGradient>
-    <radialGradient id="glow" cx="0.7" cy="0.2" r="0.8">
-      <stop offset="0" stop-color="#fff" stop-opacity="0.20"/>
-      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    <radialGradient id="glow84" cx="0.7" cy="0.3" r="0.7">
+      <stop offset="0" stop-color="#ffc0a3" stop-opacity="0.75"/><stop offset="1" stop-color="#ffc0a3" stop-opacity="0"/>
     </radialGradient>
+    <radialGradient id="vig84" cx="0.5" cy="0.5" r="0.95">
+      <stop offset="0.55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#1a0c05" stop-opacity="0.5"/>
+    </radialGradient>
+    <linearGradient id="fade84" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#170a04" stop-opacity="0"/><stop offset="1" stop-color="#170a04" stop-opacity="0.78"/></linearGradient>
   </defs>
-  <rect width="800" height="1000" fill="url(#bg)"/>
-  <rect width="800" height="1000" fill="url(#glow)"/>
-  <g fill="#15130f" opacity="0.22"><rect x="0" y="660" width="800" height="340"/></g>
-  <g stroke="#9eea1a" stroke-opacity="0.5" stroke-width="3">
-    <line x1="40" y1="936" x2="256" y2="936"/>
+  <rect width="800" height="1000" fill="url(#bg84)"/>
+  <rect width="800" height="1000" fill="url(#glow84)"/>
+  <path d="M440.00000000000006 0 L800 700 V0 Z" fill="#ffffff" opacity="0.14"/>
+  <g stroke="#ffffff" stroke-opacity="0.4" stroke-width="5" fill="none">
+    <path d="M112.00000000000001 660 V200 H400 V660"/>
+    <path d="M400 200 H688 V660"/>
+    <line x1="192" y1="200" x2="192" y2="420"/>
+    <line x1="192" y1="420" x2="320" y2="420" stroke="#d2ff85" stroke-opacity="0.8"/>
   </g>
-  <text x="40" y="964" font-family="Arial, sans-serif" font-size="65" font-weight="800" letter-spacing="1" fill="#fff" opacity="0.96">THE FLOOR</text>
+  <g transform="translate(544,600) scale(0.8888888888888888)" stroke="#d2ff85" stroke-width="9" stroke-linecap="round" fill="none" opacity="0.85">
+    <line x1="-96" y1="0" x2="96" y2="0"/>
+    <rect x="-92" y="-34" width="22" height="68" rx="8" fill="#d2ff85" stroke="none"/>
+    <rect x="70" y="-34" width="22" height="68" rx="8" fill="#d2ff85" stroke="none"/>
+    <rect x="-116" y="-22" width="14" height="44" rx="6" fill="#d2ff85" stroke="none" opacity="0.7"/>
+    <rect x="102" y="-22" width="14" height="44" rx="6" fill="#d2ff85" stroke="none" opacity="0.7"/>
+  </g>
+  <g stroke="#ffffff" stroke-opacity="0.28" stroke-width="3" stroke-linecap="round">
+    <line x1="-40" y1="200" x2="192" y2="140"/>
+    <line x1="-40" y1="340" x2="128" y2="300"/>
+    <line x1="608" y1="820" x2="832" y2="760"/>
+    <line x1="672" y1="920" x2="832" y2="880"/>
+  </g>
+  <rect width="800" height="1000" fill="url(#vig84)"/>
+  <g>
+    <rect x="0" y="700" width="800" height="300" fill="url(#fade84)"/>
+    <rect x="36" y="900" width="34" height="5" fill="#b6f93f"/>
+    <text x="36" y="958" font-family="Arial, sans-serif" font-size="82" font-weight="800" letter-spacing="1.5" fill="#fff">THE FLOOR</text>
+    <text x="36" y="984" font-family="Arial, sans-serif" font-size="32" font-weight="700" letter-spacing="3" fill="#d2ff85">SINCE 2016</text>
+  </g>
 </svg>

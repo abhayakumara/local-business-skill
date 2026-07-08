@@ -1,22 +1,35 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-label="Retainers">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#aed6ec"/>
-      <stop offset="1" stop-color="#2a7fb6"/>
+    <linearGradient id="bg44" x1="0" y1="0" x2="0.8" y2="1">
+      <stop offset="0" stop-color="#eef6fb"/><stop offset="0.6" stop-color="#d8ebf6"/><stop offset="1" stop-color="#eef6fb"/>
     </linearGradient>
-    <radialGradient id="disc" cx="0.5" cy="0.42" r="0.6">
-      <stop offset="0" stop-color="#fff" stop-opacity="0.95"/>
-      <stop offset="1" stop-color="#f3f8fb" stop-opacity="0.85"/>
+    <radialGradient id="glow44" cx="0.7" cy="0.25" r="0.7">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.9"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
     </radialGradient>
-    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="6"/>
-    </filter>
+    <linearGradient id="wave44" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2a7fb6" stop-opacity="0.16"/><stop offset="1" stop-color="#3fbf9c" stop-opacity="0.2"/>
+    </linearGradient>
+    <linearGradient id="fade44" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1c507b" stop-opacity="0"/><stop offset="1" stop-color="#1c507b" stop-opacity="0.78"/></linearGradient>
   </defs>
-  <rect width="800" height="600" fill="url(#bg)"/>
-  <circle cx="400" cy="272" r="162" fill="#0f1f2b" opacity="0.12" filter="url(#soft)"/>
-  <circle cx="400" cy="264" r="156" fill="url(#disc)"/>
-  <g transform="translate(400 264)" opacity="0.9">
-    <path d="M0 -78 C -65.52 -96.72, -96.72 -46.8, -78 7.800000000000001 C -65.52 78, -31.200000000000003 96.72, -12.48 46.8 C -3.12 18.72, 3.12 18.72, 12.48 46.8 C 31.200000000000003 96.72, 65.52 78, 78 7.800000000000001 C 96.72 -46.8, 65.52 -96.72, 0 -78 Z" fill="#2a7fb6" opacity="0.45"/>
+  <rect width="800" height="600" fill="url(#bg44)"/>
+  <rect width="800" height="600" fill="url(#glow44)"/>
+  <g>
+    <path d="M0 372 C 200 300, 320 444, 544 384 S 800 312, 800 312 V600 H0 Z" fill="url(#wave44)"/>
+    <path d="M0 456 C 240 384, 400 528, 624 456 S 800 408.00000000000006, 800 408.00000000000006 V600 H0 Z" fill="url(#wave44)" opacity="0.8"/>
   </g>
-  <text x="400" y="566" text-anchor="middle" font-family="Georgia, serif" font-size="43" font-weight="600" fill="#fff" opacity="0.96">Retainers</text>
+  <circle cx="781" cy="12" r="4" fill="none" stroke="#2a7fb6" stroke-opacity="0.25" stroke-width="1.5"/><circle cx="230" cy="245" r="4" fill="none" stroke="#2a7fb6" stroke-opacity="0.25" stroke-width="1.5"/><circle cx="250" cy="282" r="14" fill="none" stroke="#2a7fb6" stroke-opacity="0.25" stroke-width="1.5"/><circle cx="6" cy="331" r="10" fill="none" stroke="#2a7fb6" stroke-opacity="0.25" stroke-width="1.5"/><circle cx="250" cy="118" r="4" fill="none" stroke="#2a7fb6" stroke-opacity="0.25" stroke-width="1.5"/><circle cx="442" cy="236" r="8" fill="none" stroke="#2a7fb6" stroke-opacity="0.25" stroke-width="1.5"/><circle cx="294" cy="69" r="14" fill="none" stroke="#2a7fb6" stroke-opacity="0.25" stroke-width="1.5"/><circle cx="96" cy="98" r="12" fill="none" stroke="#2a7fb6" stroke-opacity="0.25" stroke-width="1.5"/>
+  <g transform="translate(528,228) scale(0.967741935483871)">
+    <circle cx="0" cy="0" r="86" fill="#ffffff" opacity="0.75"/>
+    <circle cx="0" cy="0" r="86" fill="none" stroke="#2a7fb6" stroke-opacity="0.3" stroke-width="2"/>
+    <path d="M-34 -30 c 0 -22 20 -30 34 -30 c 14 0 34 8 34 30 c 0 16 -7 26 -10 42 c -2.6 14 -4 34 -13 34 c -8 0 -6 -26 -11 -26 c -5 0 -3 26 -11 26 c -9 0 -10.4 -20 -13 -34 c -3 -16 -10 -26 -10 -42 Z" fill="#2a7fb6" opacity="0.85"/>
+    <path d="M-14 -42 q 8 -8 20 -6" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity="0.8"/>
+  </g>
+  <path d="M416 95 q 2.6 10.4 13 13 q -10.4 2.6 -13 13 q -2.6 -10.4 -13 -13 q 10.4 -2.6 13 -13 Z" fill="#3fbf9c" opacity="0.7"/>
+  <path d="M656 321 q 1.8 7.2 9 9 q -7.2 1.8 -9 9 q -1.8 -7.2 -9 -9 q 7.2 -1.8 9 -9 Z" fill="#2a7fb6" opacity="0.5"/>
+  <g>
+    <rect x="0" y="420" width="800" height="180" fill="url(#fade44)"/>
+    <rect x="36" y="508" width="26" height="3" rx="1.5" fill="#71d8ba"/>
+    <text x="36" y="556" font-family="Georgia, serif" font-size="41" font-weight="600" fill="#ffffff">Retainers</text>
+    <text x="36" y="582" font-family="Arial, sans-serif" font-size="18" letter-spacing="3" fill="#d2f5e9">KEEP IT STRAIGHT</text>
+  </g>
 </svg>

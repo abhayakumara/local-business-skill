@@ -1,24 +1,33 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-label="Apex Athletic Club training floor">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#2c2a25"/>
-      <stop offset="0.55" stop-color="#15130f"/>
-      <stop offset="1" stop-color="#000000"/>
+    <linearGradient id="hb" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5c1408"/><stop offset="0.45" stop-color="#b9270c"/><stop offset="0.8" stop-color="#f24a16"/><stop offset="1" stop-color="#932312"/>
     </linearGradient>
-    <radialGradient id="g1" cx="0.72" cy="0.28" r="0.6">
-      <stop offset="0" stop-color="#f24a16" stop-opacity="0.65"/>
-      <stop offset="1" stop-color="#f24a16" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="g2" cx="0.2" cy="0.85" r="0.5">
-      <stop offset="0" stop-color="#9eea1a" stop-opacity="0.4"/>
-      <stop offset="1" stop-color="#9eea1a" stop-opacity="0"/>
-    </radialGradient>
+    <radialGradient id="hg1" cx="0.72" cy="0.3" r="0.55"><stop offset="0" stop-color="#ffc0a3" stop-opacity="0.75"/><stop offset="1" stop-color="#ffc0a3" stop-opacity="0"/></radialGradient>
+    <radialGradient id="hg2" cx="0.15" cy="0.85" r="0.5"><stop offset="0" stop-color="#9eea1a" stop-opacity="0.3"/><stop offset="1" stop-color="#9eea1a" stop-opacity="0"/></radialGradient>
+    <radialGradient id="hv" cx="0.5" cy="0.5" r="0.95"><stop offset="0.5" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#1a0c05" stop-opacity="0.6"/></radialGradient>
   </defs>
-  <rect width="1920" height="1080" fill="url(#bg)"/>
-  <rect width="1920" height="1080" fill="url(#g1)"/>
-  <rect width="1920" height="1080" fill="url(#g2)"/>
-  <g stroke="#fff" stroke-opacity="0.05" stroke-width="2">
-    <line x1="0" y1="756" x2="1920" y2="712.8000000000001"/>
-    <line x1="0" y1="885.5999999999999" x2="1920" y2="864"/>
+  <rect width="1920" height="1080" fill="url(#hb)"/>
+  <rect width="1920" height="1080" fill="url(#hg1)"/>
+  <rect width="1920" height="1080" fill="url(#hg2)"/>
+  <path d="M960 0 L1920 918 V0 Z" fill="#ffffff" opacity="0.07"/>
+  <g stroke="#ffffff" stroke-opacity="0.75" stroke-width="30.521739130434785" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M1279.9304347826087 324 L1402.0173913043477 432 L1279.9304347826087 540" opacity="0.45"/>
+    <path d="M1406.7130434782607 324 L1528.8 432 L1406.7130434782607 540" opacity="0.8"/>
+    <path d="M1533.495652173913 324 L1655.5826086956522 432 L1533.495652173913 540"/>
   </g>
+  <circle cx="1420.8" cy="432" r="345.6" fill="none" stroke="#b6f93f" stroke-opacity="0.5" stroke-width="4" stroke-dasharray="14 20"/>
+  <g transform="translate(345.59999999999997,885.5999999999999) scale(1.7419354838709677)" stroke="#b6f93f" stroke-width="9" stroke-linecap="round" fill="none" opacity="0.85">
+    <line x1="-96" y1="0" x2="96" y2="0"/>
+    <rect x="-92" y="-34" width="22" height="68" rx="8" fill="#b6f93f" stroke="none"/>
+    <rect x="70" y="-34" width="22" height="68" rx="8" fill="#b6f93f" stroke="none"/>
+    <rect x="-116" y="-22" width="14" height="44" rx="6" fill="#b6f93f" stroke="none" opacity="0.7"/>
+    <rect x="102" y="-22" width="14" height="44" rx="6" fill="#b6f93f" stroke="none" opacity="0.7"/>
+  </g>
+  <g stroke="#fff" stroke-opacity="0.2" stroke-width="4" stroke-linecap="round">
+    <line x1="0" y1="194.4" x2="384" y2="151.20000000000002"/>
+    <line x1="0" y1="324" x2="249.60000000000002" y2="291.6"/>
+    <line x1="1574.3999999999999" y1="972" x2="1920" y2="928.8"/>
+  </g>
+  <rect width="1920" height="1080" fill="url(#hv)"/>
 </svg>

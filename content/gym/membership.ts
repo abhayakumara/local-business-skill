@@ -9,7 +9,7 @@ export const membershipPlans: MembershipPlan[] = [
   {
     id: 'foundation',
     name: 'Foundation',
-    price: '$99',
+    price: '₹2,999',
     cadence: 'per month',
     description: 'Everything you need to build a consistent training habit.',
     perks: [
@@ -23,7 +23,7 @@ export const membershipPlans: MembershipPlan[] = [
   {
     id: 'performance',
     name: 'Performance',
-    price: '$159',
+    price: '₹4,999',
     cadence: 'per month',
     description: 'Unlimited training for members who are all in.',
     perks: [
@@ -39,7 +39,7 @@ export const membershipPlans: MembershipPlan[] = [
   {
     id: 'elite',
     name: 'Elite Coaching',
-    price: '$289',
+    price: '₹9,999',
     cadence: 'per month',
     description: 'Unlimited training plus dedicated 1-on-1 coaching.',
     perks: [

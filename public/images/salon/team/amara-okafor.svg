@@ -1,12 +1,33 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="600" height="800" viewBox="0 0 600 800" role="img" aria-label="Amara">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="0.5" y2="1">
-      <stop offset="0" stop-color="#dcb35f"/>
-      <stop offset="1" stop-color="#7b5021"/>
+    <linearGradient id="bg19" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5f3d58"/><stop offset="0.55" stop-color="#8d5e82"/><stop offset="1" stop-color="#5f3d58"/>
     </linearGradient>
+    <radialGradient id="glow19" cx="0.7" cy="0.25" r="0.8">
+      <stop offset="0" stop-color="#efe7ed" stop-opacity="0.5"/><stop offset="1" stop-color="#efe7ed" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vig19" cx="0.5" cy="0.5" r="0.9">
+      <stop offset="0.6" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#2a1f27" stop-opacity="0.4"/>
+    </radialGradient>
+    <linearGradient id="fade19" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a1f27" stop-opacity="0"/><stop offset="1" stop-color="#2a1f27" stop-opacity="0.7"/></linearGradient>
   </defs>
-  <rect width="600" height="800" fill="url(#bg)"/>
-  <circle cx="300" cy="336" r="120" fill="#faf7f4" opacity="0.92"/>
-  <path d="M120 800 C 120 576, 480 576, 480 800 Z" fill="#faf7f4" opacity="0.92"/>
-  <text x="300" y="774" text-anchor="middle" font-family="Inter, sans-serif" font-size="40" font-weight="600" fill="#fff" opacity="0.9">Amara</text>
+  <rect width="600" height="800" fill="url(#bg19)"/>
+  <rect width="600" height="800" fill="url(#glow19)"/>
+  <path d="M96 800 v-416 a204.00000000000003 204.00000000000003 0 0 1 408.00000000000006 0 V800" fill="#efe7ed" opacity="0.16"/>
+  <circle cx="300" cy="288" r="114" fill="#f6efe9" opacity="0.95"/>
+  <path d="M120 784 q 0 -208 180 -208 q 180 0 180 208 Z" fill="#f6efe9" opacity="0.95"/>
+  <path d="M174 264 a126 126 0 0 1 252 0 v48 h-252 Z" fill="#5f3d58" opacity="0.85"/>
+  <g fill="none" stroke="#e8cd92" stroke-opacity="0.55">
+    <circle cx="300" cy="288" r="156" stroke-width="1.5"/>
+    <circle cx="300" cy="288" r="124.80000000000001" stroke-width="1" stroke-dasharray="3 7"/>
+    <path d="M120.60000000000002 288 a179.39999999999998 179.39999999999998 0 0 1 358.79999999999995 0" stroke-width="2"/>
+  </g>
+  <path d="M393.6 140.6 q 0.8999999999999999 4.1 5 5 q -4.1 0.8999999999999999 -5 5 q -0.8999999999999999 -4.1 -5 -5 q 4.1 -0.8999999999999999 5 -5 Z" fill="#e8cd92" opacity="0.5"/><path d="M374.4 257.08 q 0.8999999999999999 4.1 5 5 q -4.1 0.8999999999999999 -5 5 q -0.8999999999999999 -4.1 -5 -5 q 4.1 -0.8999999999999999 5 -5 Z" fill="#e8cd92" opacity="0.5"/><path d="M62.4 243.64 q 0.8999999999999999 4.1 5 5 q -4.1 0.8999999999999999 -5 5 q -0.8999999999999999 -4.1 -5 -5 q 4.1 -0.8999999999999999 5 -5 Z" fill="#e8cd92" opacity="0.5"/><path d="M475.20000000000005 192.11999999999998 q 0.8999999999999999 4.1 5 5 q -4.1 0.8999999999999999 -5 5 q -0.8999999999999999 -4.1 -5 -5 q 4.1 -0.8999999999999999 5 -5 Z" fill="#e8cd92" opacity="0.5"/><path d="M494.4 21.88 q 0.8999999999999999 4.1 5 5 q -4.1 0.8999999999999999 -5 5 q -0.8999999999999999 -4.1 -5 -5 q 4.1 -0.8999999999999999 5 -5 Z" fill="#e8cd92" opacity="0.5"/>
+  <rect width="600" height="800" fill="url(#vig19)"/>
+  <g>
+    <rect x="0" y="576" width="600" height="224.00000000000003" fill="url(#fade19)"/>
+    <rect x="36" y="708" width="26" height="2.5" rx="1.25" fill="#e8cd92"/>
+    <text x="36" y="756" font-family="Georgia, serif" font-size="56" font-weight="500" font-style="italic" fill="#fdfbf8">Amara</text>
+    <text x="36" y="782" font-family="Arial, sans-serif" font-size="24" letter-spacing="3" fill="#e8cd92" opacity="0.9">CREATIVE DIRECTOR</text>
+  </g>
 </svg>

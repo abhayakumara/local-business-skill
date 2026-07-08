@@ -15,22 +15,22 @@ export const business: Business = {
   description:
     'A strength and conditioning gym built for real progress — expert coaching, a community that shows up, and programming that gets you stronger every single week.',
   category: 'Gym & Fitness Studio',
-  priceRange: '$$',
-  phone: '+1 (415) 555-0119',
+  priceRange: '₹₹',
+  phone: '+91 99590 34412',
   email: 'train@apexathletic.com',
   bookingUrl: '#join',
   address: {
-    street: '88 Foundry Street',
-    city: 'San Francisco',
-    region: 'CA',
-    postalCode: '94107',
-    country: 'USA',
+    street: 'Plot 42, Road No. 36, Jubilee Hills',
+    city: 'Hyderabad',
+    region: 'Telangana',
+    postalCode: '500033',
+    country: 'India',
     mapsEmbedUrl:
-      'https://www.google.com/maps?q=88+Foundry+Street+San+Francisco&output=embed',
+      'https://www.google.com/maps?q=Jubilee+Hills+Hyderabad&output=embed',
     directionsUrl:
-      'https://www.google.com/maps/dir/?api=1&destination=88+Foundry+Street+San+Francisco+CA+94107',
+      'https://www.google.com/maps/dir/?api=1&destination=Jubilee+Hills+Hyderabad',
   },
-  geo: { latitude: 37.7726, longitude: -122.4015 },
+  geo: { latitude: 17.4326, longitude: 78.4071 },
   hours: [
     { day: 'Monday', open: '5:00 AM', close: '10:00 PM' },
     { day: 'Tuesday', open: '5:00 AM', close: '10:00 PM' },

@@ -3,103 +3,140 @@
 import Image from 'next/image';
 import { motion, useReducedMotion } from 'framer-motion';
 import { business } from '@/content/dental';
-import { ArrowIcon, StarIcon } from './icons';
+import { ArrowIcon, ClockIcon, ShieldIcon, StarIcon } from './icons';
 
+// Dental hero: bright clinical-calm split layout — ink copy on cloud, imagery
+// in a soft rounded frame with floating trust cards. Structurally distinct
+// from the other demos' heroes.
 export function Hero() {
   const reduce = useReducedMotion();
 
+  const fadeUp = (delay: number) => ({
+    initial: reduce ? false : { opacity: 0, y: 26 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.8, delay, ease: [0.21, 0.47, 0.32, 0.98] as const },
+  });
+
   return (
-    <section className="relative flex min-h-[100svh] items-center overflow-hidden">
-      {/* Slow cinematic push-in on load (skipped for reduced motion) */}
-      <motion.div
-        className="absolute inset-0"
-        initial={reduce ? false : { scale: 1.08 }}
-        animate={reduce ? undefined : { scale: 1 }}
-        transition={{ duration: 2.4, ease: [0.21, 0.47, 0.32, 0.98] }}
-      >
-        <Image
-          src="/images/dental/hero.svg"
-          alt="Bright, calm reception area of Northway Dental Studio"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
-        />
-      </motion.div>
-      {/* Layered scrims for depth + text legibility */}
-      <div
-        className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/45 to-ink/25"
-        aria-hidden
-      />
-      <div
-        className="absolute inset-0 bg-[radial-gradient(ellipse_at_75%_25%,rgba(42,127,182,0.45),transparent_55%)]"
-        aria-hidden
-      />
-
-      {!reduce && (
-        <motion.div
+    <section className="relative overflow-hidden pb-20 pt-32 sm:pt-36 lg:min-h-[100svh]">
+      {/* Fresh clinical atmosphere */}
+      <div aria-hidden className="absolute inset-0 -z-10">
+        <div className="absolute -right-32 -top-24 h-[30rem] w-[30rem] rounded-full bg-sky-100/90 blur-[110px]" />
+        <div className="absolute bottom-0 left-[-8rem] h-96 w-96 rounded-full bg-mint-100/80 blur-[100px]" />
+        <svg
+          className="absolute bottom-0 left-0 w-full text-sky-100/60"
+          viewBox="0 0 1440 120"
+          fill="currentColor"
+          preserveAspectRatio="none"
           aria-hidden
-          className="absolute right-[10%] top-[24%] hidden h-28 w-28 rounded-4xl bg-white/10 backdrop-blur-md lg:block"
-          animate={{ y: [0, -16, 0] }}
-          transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut' }}
-        />
-      )}
-
-      <div className="container-page relative z-10 py-32">
-        <motion.div
-          className="max-w-3xl"
-          initial={reduce ? false : { opacity: 0, y: 28 }}
-          animate={reduce ? undefined : { opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: [0.21, 0.47, 0.32, 0.98] }}
         >
-          <span className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-white backdrop-blur-sm">
-            <span className="flex gap-0.5 text-mint-300" aria-hidden>
+          <path d="M0 80 C 360 20, 720 120, 1080 60 S 1440 40, 1440 40 V120 H0 Z" />
+        </svg>
+      </div>
+
+      <div className="container-page grid items-center gap-14 lg:grid-cols-[1.05fr_1fr] lg:gap-10">
+        {/* Copy */}
+        <div className="max-w-xl">
+          <motion.span
+            {...fadeUp(0)}
+            className="inline-flex items-center gap-2 rounded-full border border-sky-200 bg-white/80 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-sky-700 shadow-glass backdrop-blur"
+          >
+            <span className="flex gap-0.5 text-mint-500" aria-hidden>
               {Array.from({ length: 5 }).map((_, i) => (
                 <StarIcon key={i} width={12} height={12} />
               ))}
             </span>
             Trusted across {business.address.city}
-          </span>
+          </motion.span>
 
-          <h1 className="heading-display mt-6 text-5xl leading-[1.05] text-white sm:text-6xl lg:text-7xl">
+          <motion.h1
+            {...fadeUp(0.12)}
+            className="heading-display mt-7 text-5xl leading-[1.06] text-ink sm:text-6xl lg:text-7xl"
+          >
             Healthy smiles,
-            <span className="block text-mint-200">without the dread.</span>
-          </h1>
+            <span className="block text-sky-600">without the dread.</span>
+          </motion.h1>
 
-          <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/85">
+          <motion.p
+            {...fadeUp(0.24)}
+            className="mt-7 max-w-lg text-lg leading-relaxed text-ink/65"
+          >
             {business.description}
-          </p>
+          </motion.p>
 
-          <div className="mt-10 flex flex-wrap items-center gap-4">
-            <a href="#book" className="btn-mint text-base">
+          <motion.div {...fadeUp(0.36)} className="mt-10 flex flex-wrap items-center gap-4">
+            <a href="#book" className="btn-primary text-base">
               Book an Appointment
               <ArrowIcon width={18} height={18} />
             </a>
-            <a
-              href="#services"
-              className="btn border border-white/30 bg-white/10 text-white backdrop-blur-sm hover:bg-white/20"
-            >
+            <a href="#services" className="btn-mint text-base">
               Explore Treatments
             </a>
-          </div>
+          </motion.div>
 
-          <p className="mt-6 text-sm text-white/70">
-            New patients welcome · Most insurance accepted · Same-day emergencies
-          </p>
-        </motion.div>
-      </div>
-
-      <div
-        className="absolute bottom-20 left-1/2 z-10 -translate-x-1/2 text-white/70"
-        aria-hidden
-      >
-        <div className="flex h-10 w-6 justify-center rounded-full border border-white/40 pt-2">
-          <motion.span
-            className="h-2 w-1 rounded-full bg-white/80"
-            animate={reduce ? undefined : { y: [0, 8, 0] }}
-            transition={{ duration: 1.6, repeat: Infinity, ease: 'easeInOut' }}
-          />
+          <motion.p {...fadeUp(0.48)} className="mt-8 text-sm text-ink/55">
+            New patients welcome · Cashless insurance · Same-day emergencies
+          </motion.p>
         </div>
+
+        {/* Framed imagery with floating trust cards */}
+        <motion.div
+          initial={reduce ? false : { opacity: 0, scale: 0.94, y: 30 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.2, ease: [0.21, 0.47, 0.32, 0.98] }}
+          className="relative mx-auto w-full max-w-md lg:max-w-none"
+        >
+          <span
+            aria-hidden
+            className="absolute -inset-5 rounded-[3.5rem] border border-sky-200/80"
+          />
+          <motion.div
+            animate={reduce ? undefined : { y: [0, -8, 0] }}
+            transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
+            className="relative overflow-hidden rounded-[3rem] shadow-lift"
+          >
+            <div className="relative aspect-[4/5] sm:aspect-square lg:aspect-[4/5]">
+              <Image
+                src="/images/dental/hero.svg"
+                alt="The calm, light-filled treatment space at Northway Dental Studio"
+                fill
+                priority
+                sizes="(min-width: 1024px) 44vw, 92vw"
+                className="object-cover"
+              />
+            </div>
+          </motion.div>
+
+          {/* Floating trust cards */}
+          <motion.div
+            initial={reduce ? false : { opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.65 }}
+            className="glass absolute -left-4 top-10 flex items-center gap-3 rounded-3xl px-5 py-4 shadow-soft sm:-left-10"
+          >
+            <span className="grid h-11 w-11 place-items-center rounded-2xl bg-mint-100 text-mint-700">
+              <ShieldIcon width={20} height={20} />
+            </span>
+            <div>
+              <p className="heading-display text-lg leading-none text-ink">Cashless</p>
+              <p className="mt-1 text-xs text-ink/55">All major insurers</p>
+            </div>
+          </motion.div>
+          <motion.div
+            initial={reduce ? false : { opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+            className="glass absolute -bottom-6 right-0 flex items-center gap-3 rounded-3xl px-5 py-4 shadow-soft sm:-right-6"
+          >
+            <span className="grid h-11 w-11 place-items-center rounded-2xl bg-sky-100 text-sky-700">
+              <ClockIcon width={20} height={20} />
+            </span>
+            <div>
+              <p className="heading-display text-lg leading-none text-ink">Same-day</p>
+              <p className="mt-1 text-xs text-ink/55">Emergency slots daily</p>
+            </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );

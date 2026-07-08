@@ -1,12 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Apex Athletic Club">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Apex Athletic Club — Train With Intent">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#2c2a25"/>
-      <stop offset="1" stop-color="#15130f"/>
-    </linearGradient>
+    <linearGradient id="ob" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5c1408"/><stop offset="0.6" stop-color="#b9270c"/><stop offset="1" stop-color="#f24a16"/></linearGradient>
+    <radialGradient id="og1" cx="0.85" cy="0.35" r="0.55"><stop offset="0" stop-color="#ffc0a3" stop-opacity="0.65"/><stop offset="1" stop-color="#ffc0a3" stop-opacity="0"/></radialGradient>
   </defs>
-  <rect width="1200" height="630" fill="url(#bg)"/>
-  <circle cx="1008" cy="315" r="220" fill="#f24a16" opacity="0.35"/>
-  <text x="80" y="289.8" font-family="Arial, sans-serif" font-size="92" font-weight="800" letter-spacing="2" fill="#fff">APEX</text>
-  <text x="84" y="353.8" font-family="Arial, sans-serif" font-size="34" font-weight="700" letter-spacing="3" fill="#9eea1a">TRAIN WITH INTENT</text>
+  <rect width="1200" height="630" fill="url(#ob)"/>
+  <rect width="1200" height="630" fill="url(#og1)"/>
+  <g stroke="#ffffff" stroke-opacity="0.75" stroke-width="19.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M918 220.8 L996 289.8 L918 358.8" opacity="0.45"/>
+    <path d="M999 220.8 L1077 289.8 L999 358.8" opacity="0.8"/>
+    <path d="M1080 220.8 L1158 289.8 L1080 358.8"/>
+  </g>
+  <circle cx="1008" cy="289.8" r="226.79999999999998" fill="none" stroke="#b6f93f" stroke-opacity="0.55" stroke-width="4" stroke-dasharray="12 18"/>
+  <rect x="64" y="176.4" width="40" height="6" fill="#b6f93f"/>
+  <text x="64" y="302.4" font-family="Arial, sans-serif" font-size="92" font-weight="800" letter-spacing="2" fill="#fff">APEX</text>
+  <text x="66" y="365.4" font-family="Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="4" fill="#d2ff85">TRAIN WITH INTENT · HYDERABAD</text>
 </svg>

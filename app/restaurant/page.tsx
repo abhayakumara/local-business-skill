@@ -1,6 +1,7 @@
 import { Navbar } from '@/components/restaurant/Navbar';
 import { Hero } from '@/components/restaurant/Hero';
 import { About } from '@/components/restaurant/About';
+import { SignatureDishes } from '@/components/restaurant/SignatureDishes';
 import { Menu } from '@/components/restaurant/Menu';
 import { Gallery } from '@/components/restaurant/Gallery';
 import { Testimonials } from '@/components/restaurant/Testimonials';
@@ -16,6 +17,7 @@ export default function Home() {
       <main id="main">
         <Hero />
         <About />
+        <SignatureDishes />
         <Menu />
         <Gallery />
         <Testimonials />

@@ -60,7 +60,7 @@ export function StructuredData() {
             '@type': 'MenuItem',
             name: d.name,
             description: d.description,
-            offers: { '@type': 'Offer', price: d.price.replace('$', ''), priceCurrency: 'USD' },
+            offers: { '@type': 'Offer', price: d.price.replace(/[^\d.]/g, ''), priceCurrency: 'INR' },
           })),
       },
     },

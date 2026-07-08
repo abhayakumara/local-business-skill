@@ -1,24 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-label="Saffron and Sage dining">
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-label="Saffron & Sage dining room at dusk">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#7f3a15"/>
-      <stop offset="0.5" stop-color="#bf5f0f"/>
-      <stop offset="1" stop-color="#683115"/>
+    <linearGradient id="hb" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3a1c08"/><stop offset="0.45" stop-color="#7f3a15"/><stop offset="0.8" stop-color="#bf5f0f"/><stop offset="1" stop-color="#9c4711"/>
     </linearGradient>
-    <radialGradient id="g1" cx="0.3" cy="0.25" r="0.6">
-      <stop offset="0" stop-color="#f3a847" stop-opacity="0.7"/>
-      <stop offset="1" stop-color="#f3a847" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="g2" cx="0.8" cy="0.8" r="0.5">
-      <stop offset="0" stop-color="#557a4b" stop-opacity="0.5"/>
-      <stop offset="1" stop-color="#557a4b" stop-opacity="0"/>
-    </radialGradient>
+    <radialGradient id="hg1" cx="0.72" cy="0.34" r="0.5"><stop offset="0" stop-color="#f9e7c8" stop-opacity="0.8"/><stop offset="1" stop-color="#f9e7c8" stop-opacity="0"/></radialGradient>
+    <radialGradient id="hg2" cx="0.18" cy="0.75" r="0.45"><stop offset="0" stop-color="#557a4b" stop-opacity="0.45"/><stop offset="1" stop-color="#557a4b" stop-opacity="0"/></radialGradient>
+    <radialGradient id="hv" cx="0.5" cy="0.5" r="0.95"><stop offset="0.55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#1c0d03" stop-opacity="0.6"/></radialGradient>
   </defs>
-  <rect width="1920" height="1080" fill="url(#bg)"/>
-  <rect width="1920" height="1080" fill="url(#g1)"/>
-  <rect width="1920" height="1080" fill="url(#g2)"/>
-  <g opacity="0.5" fill="#fbf7f0">
-    <circle cx="384" cy="756" r="120" opacity="0.08"/>
-    <circle cx="1440" cy="432" r="180" opacity="0.06"/>
+  <rect width="1920" height="1080" fill="url(#hb)"/>
+  <rect width="1920" height="1080" fill="url(#hg1)"/>
+  <rect width="1920" height="1080" fill="url(#hg2)"/>
+  <g>
+    <circle cx="1382.3999999999999" cy="410.4" r="259.2" fill="#fff" opacity="0.14"/>
+    <circle cx="1382.3999999999999" cy="410.4" r="212.54399999999998" fill="none" stroke="#f9e7c8" stroke-opacity="0.6" stroke-width="2"/>
+    <circle cx="1382.3999999999999" cy="410.4" r="150.33599999999998" fill="#e2922b" opacity="0.85"/>
+    <circle cx="1382.3999999999999" cy="410.4" r="150.33599999999998" fill="none" stroke="#fff" stroke-opacity="0.25" stroke-width="3"/>
+    <path d="M1304.6399999999999 397.44 q 77.75999999999999 -90.71999999999998 155.51999999999998 0 q -77.75999999999999 90.71999999999998 -155.51999999999998 0 Z" fill="#f9e7c8" opacity="0.85"/>
+    <circle cx="1351.2959999999998" cy="467.424" r="15.552" fill="#fff" opacity="0.7"/>
+    <circle cx="1434.2399999999998" cy="457.056" r="11.664" fill="#fff" opacity="0.55"/>
   </g>
+  <g stroke="#fff" stroke-opacity="0.5" stroke-width="5.225806451612903" fill="none" stroke-linecap="round">
+    <path d="M1344.0774193548386 108 c -13.935483870967742 -31.35483870967742, 13.935483870967742 -45.29032258064516, 0 -76.64516129032258"/>
+    <path d="M1382.3999999999999 97.54838709677419 c -13.935483870967742 -34.83870967741935, 13.935483870967742 -48.774193548387096, 0 -83.61290322580645"/>
+    <path d="M1420.722580645161 108 c -13.935483870967742 -31.35483870967742, 13.935483870967742 -45.29032258064516, 0 -76.64516129032258"/>
+  </g>
+  <g fill="#f9e7c8">
+    <circle cx="192" cy="194.4" r="5" opacity="0.5"/><circle cx="384" cy="345.6" r="3.4" opacity="0.4"/>
+    <circle cx="633.6" cy="151.20000000000002" r="4" opacity="0.45"/><circle cx="921.5999999999999" cy="280.8" r="2.6" opacity="0.35"/>
+    <circle cx="1113.6" cy="734.4000000000001" r="4.5" opacity="0.3"/><circle cx="1689.6" cy="756" r="3.4" opacity="0.35"/>
+  </g>
+  <g fill="#9bb78f" opacity="0.5">
+    <path d="M115.19999999999999 972 q 46.28571428571429 -77.14285714285715 0 -149.14285714285717 q -46.28571428571429 72 0 149.14285714285717 Z"/>
+    <path d="M166.62857142857143 987.4285714285714 q 66.85714285714286 -51.42857142857143 41.142857142857146 -133.71428571428572 q -66.85714285714286 51.42857142857143 -41.142857142857146 133.71428571428572 Z"/>
+  </g>
+  <rect width="1920" height="1080" fill="url(#hv)"/>
 </svg>

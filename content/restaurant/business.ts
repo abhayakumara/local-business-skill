@@ -15,22 +15,22 @@ export const business: Business = {
   description:
     'Saffron & Sage reimagines the flavours of India for the modern table — heirloom spices, seasonal produce, and the warmth of a family kitchen, plated with quiet elegance.',
   cuisine: 'Modern Indian',
-  priceRange: '$$',
-  phone: '+1 (415) 555-0188',
+  priceRange: '₹₹',
+  phone: '+91 98450 21188',
   email: 'hello@saffronandsage.com',
   reservationsUrl: '#reserve',
   address: {
-    street: '128 Magnolia Avenue',
-    city: 'San Francisco',
-    region: 'CA',
-    postalCode: '94110',
-    country: 'USA',
+    street: '128, 12th Main Road, Indiranagar',
+    city: 'Bengaluru',
+    region: 'Karnataka',
+    postalCode: '560008',
+    country: 'India',
     mapsEmbedUrl:
-      'https://www.google.com/maps?q=128+Magnolia+Avenue+San+Francisco&output=embed',
+      'https://www.google.com/maps?q=12th+Main+Road+Indiranagar+Bengaluru&output=embed',
     directionsUrl:
-      'https://www.google.com/maps/dir/?api=1&destination=128+Magnolia+Avenue+San+Francisco+CA+94110',
+      'https://www.google.com/maps/dir/?api=1&destination=12th+Main+Road+Indiranagar+Bengaluru',
   },
-  geo: { latitude: 37.7599, longitude: -122.4148 },
+  geo: { latitude: 12.9719, longitude: 77.6412 },
   hours: [
     { day: 'Monday', open: 'Closed', close: '' },
     { day: 'Tuesday', open: '5:00 PM', close: '10:00 PM' },

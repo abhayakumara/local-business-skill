@@ -1,20 +1,34 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="700" viewBox="0 0 900 700" role="img" aria-label="Kids Corner">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="0.6" y2="1">
-      <stop offset="0" stop-color="#79bade"/>
-      <stop offset="1" stop-color="#1f6498"/>
+    <linearGradient id="bg80" x1="0" y1="0" x2="0.8" y2="1">
+      <stop offset="0" stop-color="#eef6fb"/><stop offset="0.6" stop-color="#d8ebf6"/><stop offset="1" stop-color="#eef6fb"/>
     </linearGradient>
-    <radialGradient id="glow" cx="0.7" cy="0.2" r="0.8">
-      <stop offset="0" stop-color="#fff" stop-opacity="0.35"/>
-      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    <radialGradient id="glow80" cx="0.7" cy="0.25" r="0.7">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.9"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
     </radialGradient>
+    <linearGradient id="wave80" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2a7fb6" stop-opacity="0.16"/><stop offset="1" stop-color="#3fbf9c" stop-opacity="0.2"/>
+    </linearGradient>
+    <linearGradient id="fade80" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1c507b" stop-opacity="0"/><stop offset="1" stop-color="#1c507b" stop-opacity="0.78"/></linearGradient>
   </defs>
-  <rect width="900" height="700" fill="url(#bg)"/>
-  <rect width="900" height="700" fill="url(#glow)"/>
-  <g fill="#0f1f2b" opacity="0.08"><rect x="0" y="448" width="900" height="252"/></g>
-  <g stroke="#fff" stroke-opacity="0.18" stroke-width="2">
-    <line x1="0" y1="210" x2="900" y2="168"/>
-    <line x1="0" y1="350" x2="900" y2="315"/>
+  <rect width="900" height="700" fill="url(#bg80)"/>
+  <rect width="900" height="700" fill="url(#glow80)"/>
+  <g>
+    <path d="M0 434 C 225 350, 360 518, 612 448 S 900 364, 900 364 V700 H0 Z" fill="url(#wave80)"/>
+    <path d="M0 532 C 270 448, 450 616, 702 532 S 900 476.00000000000006, 900 476.00000000000006 V700 H0 Z" fill="url(#wave80)" opacity="0.8"/>
   </g>
-  <text x="40" y="662" font-family="Georgia, serif" font-size="42" font-weight="600" fill="#fff" opacity="0.96">Kids Corner</text>
+  <g opacity="0.5">
+    <rect x="108" y="168" width="270" height="238.00000000000003" rx="18" fill="#ffffff" opacity="0.7"/>
+    <rect x="432" y="112" width="198" height="182" rx="16" fill="#ffffff" opacity="0.5"/>
+    <rect x="144" y="210" width="198" height="6" rx="3" fill="#2a7fb6" opacity="0.4"/>
+    <rect x="144" y="252" width="144" height="6" rx="3" fill="#2a7fb6" opacity="0.25"/>
+  </g>
+  <circle cx="151" cy="74" r="4" fill="none" stroke="#2a7fb6" stroke-opacity="0.25" stroke-width="1.5"/><circle cx="425" cy="403" r="12" fill="none" stroke="#2a7fb6" stroke-opacity="0.25" stroke-width="1.5"/><circle cx="79" cy="413" r="12" fill="none" stroke="#2a7fb6" stroke-opacity="0.25" stroke-width="1.5"/><circle cx="727" cy="124" r="16" fill="none" stroke="#2a7fb6" stroke-opacity="0.25" stroke-width="1.5"/><circle cx="734" cy="171" r="10" fill="none" stroke="#2a7fb6" stroke-opacity="0.25" stroke-width="1.5"/><circle cx="360" cy="165" r="12" fill="none" stroke="#2a7fb6" stroke-opacity="0.25" stroke-width="1.5"/><circle cx="662" cy="262" r="4" fill="none" stroke="#2a7fb6" stroke-opacity="0.25" stroke-width="1.5"/>
+  <path d="M720 127 q 2.6 10.4 13 13 q -10.4 2.6 -13 13 q -2.6 -10.4 -13 -13 q 10.4 -2.6 13 -13 Z" fill="#3fbf9c" opacity="0.7"/>
+  <g>
+    <rect x="0" y="489.99999999999994" width="900" height="210" fill="url(#fade80)"/>
+    <rect x="36" y="608" width="26" height="3" rx="1.5" fill="#71d8ba"/>
+    <text x="36" y="656" font-family="Georgia, serif" font-size="48" font-weight="600" fill="#ffffff">Kids Corner</text>
+    <text x="36" y="682" font-family="Arial, sans-serif" font-size="21" letter-spacing="3" fill="#d2f5e9">LITTLE SMILES</text>
+  </g>
 </svg>

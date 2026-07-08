@@ -1,6 +1,7 @@
 import { Navbar } from '@/components/dental/Navbar';
 import { Hero } from '@/components/dental/Hero';
 import { About } from '@/components/dental/About';
+import { CareJourney } from '@/components/dental/CareJourney';
 import { Services } from '@/components/dental/Services';
 import { Team } from '@/components/dental/Team';
 import { Insurance } from '@/components/dental/Insurance';
@@ -18,6 +19,7 @@ export default function Home() {
       <main id="main">
         <Hero />
         <About />
+        <CareJourney />
         <Services />
         <Team />
         <Insurance />

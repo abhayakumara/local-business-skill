@@ -1,12 +1,30 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="600" height="800" viewBox="0 0 600 800" role="img" aria-label="Dr. Marsh">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="0.5" y2="1">
-      <stop offset="0" stop-color="#a8ead4"/>
-      <stop offset="1" stop-color="#23a283"/>
+    <linearGradient id="bg77" x1="0" y1="0" x2="0.8" y2="1">
+      <stop offset="0" stop-color="#eef6fb"/><stop offset="0.6" stop-color="#d8ebf6"/><stop offset="1" stop-color="#eef6fb"/>
     </linearGradient>
+    <radialGradient id="glow77" cx="0.7" cy="0.25" r="0.7">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.9"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="wave77" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2a7fb6" stop-opacity="0.16"/><stop offset="1" stop-color="#3fbf9c" stop-opacity="0.2"/>
+    </linearGradient>
+    <linearGradient id="fade77" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1c507b" stop-opacity="0"/><stop offset="1" stop-color="#1c507b" stop-opacity="0.78"/></linearGradient>
   </defs>
-  <rect width="600" height="800" fill="url(#bg)"/>
-  <circle cx="300" cy="336" r="120" fill="#f3f8fb" opacity="0.94"/>
-  <path d="M120 800 C 120 576, 480 576, 480 800 Z" fill="#f3f8fb" opacity="0.94"/>
-  <text x="300" y="774" text-anchor="middle" font-family="Inter, sans-serif" font-size="40" font-weight="600" fill="#fff" opacity="0.9">Dr. Marsh</text>
+  <rect width="600" height="800" fill="url(#bg77)"/>
+  <rect width="600" height="800" fill="url(#glow77)"/>
+  <circle cx="300" cy="320" r="198" fill="#ffffff" opacity="0.55"/>
+  <circle cx="300" cy="288" r="111" fill="#fdf6ef"/>
+  <path d="M120 784 q 0 -200 180 -200 q 180 0 180 200 Z" fill="#ffffff"/>
+  <path d="M120 784 q 0 -200 180 -200 q 180 0 180 200 Z" fill="#2a7fb6" opacity="0.14"/>
+  <path d="M264 632 h72 l-12 80 h-48 Z" fill="#3fbf9c" opacity="0.7"/>
+  <path d="M120 133 q 2.2 8.8 11 11 q -8.8 2.2 -11 11 q -2.2 -8.8 -11 -11 q 8.8 -2.2 11 -11 Z" fill="#3fbf9c" opacity="0.7"/>
+  <path d="M491.99999999999994 200 q 1.6 6.4 8 8 q -6.4 1.6 -8 8 q -1.6 -6.4 -8 -8 q 6.4 -1.6 8 -8 Z" fill="#2a7fb6" opacity="0.5"/>
+  <circle cx="394" cy="61" r="6" fill="none" stroke="#2a7fb6" stroke-opacity="0.25" stroke-width="1.5"/><circle cx="72" cy="86" r="14" fill="none" stroke="#2a7fb6" stroke-opacity="0.25" stroke-width="1.5"/><circle cx="24" cy="207" r="4" fill="none" stroke="#2a7fb6" stroke-opacity="0.25" stroke-width="1.5"/><circle cx="221" cy="108" r="16" fill="none" stroke="#2a7fb6" stroke-opacity="0.25" stroke-width="1.5"/><circle cx="336" cy="104" r="14" fill="none" stroke="#2a7fb6" stroke-opacity="0.25" stroke-width="1.5"/>
+  <g>
+    <rect x="0" y="560" width="600" height="240" fill="url(#fade77)"/>
+    <rect x="36" y="708" width="26" height="3" rx="1.5" fill="#71d8ba"/>
+    <text x="36" y="756" font-family="Georgia, serif" font-size="54" font-weight="600" fill="#ffffff">Dr. Marsh</text>
+    <text x="36" y="782" font-family="Arial, sans-serif" font-size="24" letter-spacing="3" fill="#d2f5e9">PRINCIPAL DENTIST</text>
+  </g>
 </svg>

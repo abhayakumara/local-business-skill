@@ -177,3 +177,40 @@ export interface Faq {
   question: string;
   answer: string;
 }
+
+/* ── Industry-signature sections ────────────────────────────────────────── */
+
+/** Salon: one step of the signature ritual storytelling section. */
+export interface RitualStep {
+  id: string;
+  number: string; // e.g. "01"
+  name: string;
+  description: string;
+  image: string;
+  imageAlt: string;
+}
+
+/** Dental: one step of the smile-journey timeline. */
+export interface JourneyStep {
+  id: string;
+  number: string;
+  name: string;
+  description: string;
+  icon: 'tooth' | 'shield' | 'sparkle' | 'clock';
+  note: string; // e.g. "Takes 2 minutes"
+}
+
+/** Gym: a class slot in the weekly schedule. */
+export interface ScheduleSession {
+  time: string; // e.g. "6:00 AM"
+  name: string;
+  coach: string;
+  intensity: 'Low' | 'Moderate' | 'High';
+}
+
+export interface ScheduleDay {
+  id: string;
+  day: string; // e.g. "Monday"
+  short: string; // e.g. "Mon"
+  sessions: ScheduleSession[];
+}

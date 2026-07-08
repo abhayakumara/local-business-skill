@@ -1,12 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Saffron and Sage">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Saffron & Sage — A Modern Indian Kitchen">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#7f3a15"/>
-      <stop offset="1" stop-color="#d97915"/>
-    </linearGradient>
+    <linearGradient id="ob" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4a2409"/><stop offset="0.6" stop-color="#9c4711"/><stop offset="1" stop-color="#bf5f0f"/></linearGradient>
+    <radialGradient id="og1" cx="0.85" cy="0.4" r="0.5"><stop offset="0" stop-color="#f9e7c8" stop-opacity="0.7"/><stop offset="1" stop-color="#f9e7c8" stop-opacity="0"/></radialGradient>
   </defs>
-  <rect width="1200" height="630" fill="url(#bg)"/>
-  <circle cx="983.9999999999999" cy="315" r="220" fill="#f3a847" opacity="0.25"/>
-  <text x="80" y="289.8" font-family="Georgia, serif" font-size="84" font-weight="700" fill="#fff">Saffron &amp; Sage</text>
-  <text x="84" y="359.8" font-family="Inter, sans-serif" font-size="34" fill="#fbf7f0" opacity="0.9">A Modern Indian Kitchen</text>
+  <rect width="1200" height="630" fill="url(#ob)"/>
+  <rect width="1200" height="630" fill="url(#og1)"/>
+  <g>
+    <circle cx="983.9999999999999" cy="315" r="214.20000000000002" fill="#fff" opacity="0.14"/>
+    <circle cx="983.9999999999999" cy="315" r="175.644" fill="none" stroke="#f9e7c8" stroke-opacity="0.6" stroke-width="2"/>
+    <circle cx="983.9999999999999" cy="315" r="124.236" fill="#e2922b" opacity="0.85"/>
+    <circle cx="983.9999999999999" cy="315" r="124.236" fill="none" stroke="#fff" stroke-opacity="0.25" stroke-width="3"/>
+    <path d="M919.7399999999999 304.29 q 64.26 -74.97 128.52 0 q -64.26 74.97 -128.52 0 Z" fill="#f9e7c8" opacity="0.85"/>
+    <circle cx="958.2959999999999" cy="362.124" r="12.852" fill="#fff" opacity="0.7"/>
+    <circle cx="1026.84" cy="353.556" r="9.639000000000001" fill="#fff" opacity="0.55"/>
+  </g>
+  <g stroke="#fff" stroke-opacity="0.5" stroke-width="3.3000000000000003" fill="none" stroke-linecap="round">
+    <path d="M959.7999999999998 75.6 c -8.8 -19.8, 8.8 -28.6, 0 -48.400000000000006"/>
+    <path d="M983.9999999999999 69 c -8.8 -22, 8.8 -30.800000000000004, 0 -52.800000000000004"/>
+    <path d="M1008.1999999999999 75.6 c -8.8 -19.8, 8.8 -28.6, 0 -48.400000000000006"/>
+  </g>
+  <g fill="#9bb78f" opacity="0.5">
+    <path d="M70 579.6 q 23.400000000000002 -39 0 -75.4 q -23.400000000000002 36.4 0 75.4 Z"/>
+    <path d="M96 587.4 q 33.800000000000004 -26 20.8 -67.60000000000001 q -33.800000000000004 26 -20.8 67.60000000000001 Z"/>
+  </g>
+  <rect x="64" y="189" width="30" height="4" rx="2" fill="#f2cd8f"/>
+  <text x="64" y="289.8" font-family="Georgia, serif" font-size="78" font-weight="600" fill="#fff8ef">Saffron &amp; Sage</text>
+  <text x="66" y="352.8" font-family="Arial, sans-serif" font-size="28" letter-spacing="4" fill="#f2cd8f">A MODERN INDIAN KITCHEN · BENGALURU</text>
 </svg>

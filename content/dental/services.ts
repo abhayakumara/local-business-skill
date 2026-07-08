@@ -37,7 +37,7 @@ export const services: Service[] = [
     name: 'Check-up & Clean',
     description:
       'A thorough exam, professional clean, and a clear plan — the foundation of healthy teeth.',
-    price: 'from $120',
+    price: 'from ₹1,200',
     duration: '45 min',
     image: '/images/dental/services/checkup-and-clean.svg',
     imageAlt: 'Comfortable dental check-up and hygiene appointment',
@@ -49,7 +49,7 @@ export const services: Service[] = [
     name: 'Hygiene & Gum Care',
     description:
       'Deeper cleaning and tailored advice to keep gums healthy and prevent problems early.',
-    price: 'from $95',
+    price: 'from ₹1,500',
     duration: '40 min',
     image: '/images/dental/services/dental-hygiene.svg',
     imageAlt: 'Dental hygienist providing gum care',
@@ -60,7 +60,7 @@ export const services: Service[] = [
     name: "Children's Dentistry",
     description:
       'Gentle, friendly care that helps little ones feel at ease and build great habits.',
-    price: 'from $85',
+    price: 'from ₹900',
     duration: '30 min',
     image: '/images/dental/services/childrens-dentistry.svg',
     imageAlt: 'Child smiling at a friendly dental visit',
@@ -71,7 +71,7 @@ export const services: Service[] = [
     name: 'Emergency Care',
     description:
       'Same-day relief for pain, breaks, and dental emergencies when you need it most.',
-    price: 'from $130',
+    price: 'from ₹1,500',
     duration: '30 min',
     image: '/images/dental/services/emergency-care.svg',
     imageAlt: 'Prompt emergency dental treatment',
@@ -84,7 +84,7 @@ export const services: Service[] = [
     name: 'Teeth Whitening',
     description:
       'Professional whitening for a noticeably brighter smile, with kind-to-enamel results.',
-    price: 'from $290',
+    price: 'from ₹9,500',
     duration: '60 min',
     image: '/images/dental/services/teeth-whitening.svg',
     imageAlt: 'Bright smile after professional teeth whitening',
@@ -96,7 +96,7 @@ export const services: Service[] = [
     name: 'Porcelain Veneers',
     description:
       'Custom, hand-finished veneers that reshape and brighten in a natural, lasting way.',
-    price: 'from $850',
+    price: 'from ₹12,000',
     duration: '90 min',
     image: '/images/dental/services/porcelain-veneers.svg',
     imageAlt: 'Natural-looking porcelain veneers',
@@ -107,7 +107,7 @@ export const services: Service[] = [
     name: 'Composite Bonding',
     description:
       'A minimally invasive way to close gaps and reshape teeth in a single visit.',
-    price: 'from $220',
+    price: 'from ₹4,500',
     duration: '60 min',
     image: '/images/dental/services/composite-bonding.svg',
     imageAlt: 'Composite bonding to reshape a tooth',
@@ -120,7 +120,7 @@ export const services: Service[] = [
     name: 'Clear Aligners',
     description:
       'Virtually invisible aligners that straighten teeth on your schedule, comfortably.',
-    price: 'from $2,400',
+    price: 'from ₹75,000',
     duration: '45 min',
     image: '/images/dental/services/clear-aligners.svg',
     imageAlt: 'Clear orthodontic aligner being fitted',
@@ -132,7 +132,7 @@ export const services: Service[] = [
     name: 'Retainers',
     description:
       'Custom retainers to protect your results and keep your smile beautifully aligned.',
-    price: 'from $180',
+    price: 'from ₹6,000',
     duration: '30 min',
     image: '/images/dental/services/retainers.svg',
     imageAlt: 'Custom-made dental retainer',
@@ -145,7 +145,7 @@ export const services: Service[] = [
     name: 'Dental Implants',
     description:
       'A permanent, natural-feeling way to replace a missing tooth and restore your bite.',
-    price: 'from $1,900',
+    price: 'from ₹35,000',
     duration: '90 min',
     image: '/images/dental/services/dental-implants.svg',
     imageAlt: 'Dental implant restoration',
@@ -157,7 +157,7 @@ export const services: Service[] = [
     name: 'Crowns & Bridges',
     description:
       'Tooth-coloured crowns and bridges that rebuild strength and blend seamlessly.',
-    price: 'from $780',
+    price: 'from ₹8,500',
     duration: '75 min',
     image: '/images/dental/services/crowns-and-bridges.svg',
     imageAlt: 'Porcelain crown matched to natural teeth',
@@ -168,7 +168,7 @@ export const services: Service[] = [
     name: 'Tooth-Coloured Fillings',
     description:
       'Mercury-free, natural-looking fillings that restore teeth discreetly and gently.',
-    price: 'from $160',
+    price: 'from ₹2,500',
     duration: '45 min',
     image: '/images/dental/services/tooth-coloured-fillings.svg',
     imageAlt: 'Natural tooth-coloured filling treatment',

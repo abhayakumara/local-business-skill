@@ -1,12 +1,30 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="600" height="800" viewBox="0 0 600 800" role="img" aria-label="Dr. Khan">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="0.5" y2="1">
-      <stop offset="0" stop-color="#71d8ba"/>
-      <stop offset="1" stop-color="#17826a"/>
+    <linearGradient id="bg28" x1="0" y1="0" x2="0.8" y2="1">
+      <stop offset="0" stop-color="#edfbf6"/><stop offset="0.6" stop-color="#d2f5e9"/><stop offset="1" stop-color="#edfbf6"/>
     </linearGradient>
+    <radialGradient id="glow28" cx="0.7" cy="0.25" r="0.7">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.9"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="wave28" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#23a283" stop-opacity="0.16"/><stop offset="1" stop-color="#459ace" stop-opacity="0.2"/>
+    </linearGradient>
+    <linearGradient id="fade28" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#156857" stop-opacity="0"/><stop offset="1" stop-color="#156857" stop-opacity="0.78"/></linearGradient>
   </defs>
-  <rect width="600" height="800" fill="url(#bg)"/>
-  <circle cx="300" cy="336" r="120" fill="#f3f8fb" opacity="0.94"/>
-  <path d="M120 800 C 120 576, 480 576, 480 800 Z" fill="#f3f8fb" opacity="0.94"/>
-  <text x="300" y="774" text-anchor="middle" font-family="Inter, sans-serif" font-size="40" font-weight="600" fill="#fff" opacity="0.9">Dr. Khan</text>
+  <rect width="600" height="800" fill="url(#bg28)"/>
+  <rect width="600" height="800" fill="url(#glow28)"/>
+  <circle cx="300" cy="320" r="198" fill="#ffffff" opacity="0.55"/>
+  <circle cx="300" cy="288" r="111" fill="#fdf6ef"/>
+  <path d="M120 784 q 0 -200 180 -200 q 180 0 180 200 Z" fill="#ffffff"/>
+  <path d="M120 784 q 0 -200 180 -200 q 180 0 180 200 Z" fill="#23a283" opacity="0.14"/>
+  <path d="M264 632 h72 l-12 80 h-48 Z" fill="#459ace" opacity="0.7"/>
+  <path d="M120 133 q 2.2 8.8 11 11 q -8.8 2.2 -11 11 q -2.2 -8.8 -11 -11 q 8.8 -2.2 11 -11 Z" fill="#459ace" opacity="0.7"/>
+  <path d="M491.99999999999994 200 q 1.6 6.4 8 8 q -6.4 1.6 -8 8 q -1.6 -6.4 -8 -8 q 6.4 -1.6 8 -8 Z" fill="#23a283" opacity="0.5"/>
+  <circle cx="422" cy="52" r="6" fill="none" stroke="#23a283" stroke-opacity="0.25" stroke-width="1.5"/><circle cx="475" cy="17" r="10" fill="none" stroke="#23a283" stroke-opacity="0.25" stroke-width="1.5"/><circle cx="451" cy="17" r="12" fill="none" stroke="#23a283" stroke-opacity="0.25" stroke-width="1.5"/><circle cx="480" cy="152" r="14" fill="none" stroke="#23a283" stroke-opacity="0.25" stroke-width="1.5"/><circle cx="254" cy="134" r="10" fill="none" stroke="#23a283" stroke-opacity="0.25" stroke-width="1.5"/>
+  <g>
+    <rect x="0" y="560" width="600" height="240" fill="url(#fade28)"/>
+    <rect x="36" y="708" width="26" height="3" rx="1.5" fill="#71d8ba"/>
+    <text x="36" y="756" font-family="Georgia, serif" font-size="54" font-weight="600" fill="#ffffff">Dr. Khan</text>
+    <text x="36" y="782" font-family="Arial, sans-serif" font-size="24" letter-spacing="3" fill="#d2f5e9">ORTHODONTICS</text>
+  </g>
 </svg>

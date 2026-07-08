@@ -42,7 +42,7 @@ export function StructuredData() {
       '@type': 'Offer',
       name: p.name,
       price: p.price.replace(/[^\d.]/g, ''),
-      priceCurrency: 'USD',
+      priceCurrency: 'INR',
       description: p.description,
       category: 'Gym membership',
     })),

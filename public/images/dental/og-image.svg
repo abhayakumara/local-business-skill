@@ -1,12 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Northway Dental Studio">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Northway Dental Studio — Modern, Gentle Dentistry">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#1f6498"/>
-      <stop offset="1" stop-color="#2a7fb6"/>
-    </linearGradient>
+    <linearGradient id="ob" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#143a58"/><stop offset="0.6" stop-color="#1f6498"/><stop offset="1" stop-color="#2a7fb6"/></linearGradient>
+    <radialGradient id="og1" cx="0.85" cy="0.35" r="0.5"><stop offset="0" stop-color="#d2f5e9" stop-opacity="0.55"/><stop offset="1" stop-color="#d2f5e9" stop-opacity="0"/></radialGradient>
   </defs>
-  <rect width="1200" height="630" fill="url(#bg)"/>
-  <circle cx="983.9999999999999" cy="315" r="220" fill="#3fbf9c" opacity="0.28"/>
-  <text x="80" y="289.8" font-family="Georgia, serif" font-size="76" font-weight="700" fill="#fff">Northway Dental</text>
-  <text x="84" y="353.8" font-family="Inter, sans-serif" font-size="32" fill="#d2f5e9" opacity="0.95">Modern, Gentle Dentistry</text>
+  <rect width="1200" height="630" fill="url(#ob)"/>
+  <rect width="1200" height="630" fill="url(#og1)"/>
+  <g transform="translate(996,302.4) scale(1.5)">
+    <circle cx="0" cy="0" r="86" fill="#ffffff" opacity="0.75"/>
+    <circle cx="0" cy="0" r="86" fill="none" stroke="#eef6fb" stroke-opacity="0.3" stroke-width="2"/>
+    <path d="M-34 -30 c 0 -22 20 -30 34 -30 c 14 0 34 8 34 30 c 0 16 -7 26 -10 42 c -2.6 14 -4 34 -13 34 c -8 0 -6 -26 -11 -26 c -5 0 -3 26 -11 26 c -9 0 -10.4 -20 -13 -34 c -3 -16 -10 -26 -10 -42 Z" fill="#eef6fb" opacity="0.85"/>
+    <path d="M-14 -42 q 8 -8 20 -6" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity="0.8"/>
+  </g>
+  <path d="M792 85.8 q 3 12 15 15 q -12 3 -15 15 q -3 -12 -15 -15 q 12 -3 15 -15 Z" fill="#d2f5e9" opacity="0.7"/>
+  <rect x="64" y="189" width="30" height="3.5" rx="1.75" fill="#71d8ba"/>
+  <text x="64" y="296.09999999999997" font-family="Georgia, serif" font-size="70" font-weight="600" fill="#ffffff">Northway Dental Studio</text>
+  <text x="66" y="359.09999999999997" font-family="Arial, sans-serif" font-size="26" letter-spacing="4" fill="#d2f5e9">MODERN, GENTLE DENTISTRY · NEW DELHI</text>
 </svg>

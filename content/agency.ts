@@ -10,8 +10,8 @@ export const agency = {
   description:
     'We design and build premium, conversion-focused websites for local businesses — restaurants, salons, dental practices, gyms and more. Every site is fast, beautiful on every screen, and engineered to turn visitors into bookings.',
   email: 'hello@lumen.studio',
-  phone: '+1 (415) 555-0142',
-  city: 'San Francisco, CA',
+  phone: '+91 80 4711 2345',
+  city: 'Bengaluru, India',
 };
 
 export const heroStats = [
@@ -237,7 +237,7 @@ export const pricingTiers: PricingTier[] = [
   {
     id: 'launch',
     name: 'Launch',
-    price: '$1,900',
+    price: '₹49,000',
     cadence: 'one-time',
     description: 'Everything a local business needs to look world-class online.',
     perks: [
@@ -252,7 +252,7 @@ export const pricingTiers: PricingTier[] = [
   {
     id: 'growth',
     name: 'Growth',
-    price: '$3,400',
+    price: '₹99,000',
     cadence: 'one-time',
     description: 'The full brand treatment for businesses ready to lead their market.',
     perks: [
@@ -269,7 +269,7 @@ export const pricingTiers: PricingTier[] = [
   {
     id: 'partner',
     name: 'Partner',
-    price: '$290',
+    price: '₹9,900',
     cadence: 'per month',
     description: 'We run your web presence so you can run the business.',
     perks: [
