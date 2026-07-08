@@ -11,9 +11,9 @@ export default function Template({ children }: { children: ReactNode }) {
 
   return (
     <motion.div
-      initial={reduce ? false : { opacity: 0, y: 18 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, ease: [0.21, 0.47, 0.32, 0.98] }}
+      initial={reduce ? false : { opacity: 0, y: 24, scale: 0.992, filter: 'blur(8px)' }}
+      animate={{ opacity: 1, y: 0, scale: 1, filter: 'blur(0px)' }}
+      transition={{ duration: 0.65, ease: [0.21, 0.47, 0.32, 0.98] }}
     >
       {children}
     </motion.div>

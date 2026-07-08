@@ -3,6 +3,8 @@
 import Image from 'next/image';
 import { motion, useReducedMotion } from 'framer-motion';
 import { business } from '@/content/dental';
+import { Ambient3D } from '@/components/ui/Ambient3D';
+import { TextReveal } from '@/components/ui/TextReveal';
 import { ArrowIcon, ClockIcon, ShieldIcon, StarIcon } from './icons';
 
 // Dental hero: bright clinical-calm split layout — ink copy on cloud, imagery
@@ -34,7 +36,13 @@ export function Hero() {
         </svg>
       </div>
 
-      <div className="container-page grid items-center gap-14 lg:grid-cols-[1.05fr_1fr] lg:gap-10">
+      {/* Calm glass orbs drifting through the air */}
+      <Ambient3D
+        variant="orbs"
+        className="pointer-events-none absolute inset-0 z-0"
+      />
+
+      <div className="container-page relative z-10 grid items-center gap-14 lg:grid-cols-[1.05fr_1fr] lg:gap-10">
         {/* Copy */}
         <div className="max-w-xl">
           <motion.span
@@ -49,13 +57,12 @@ export function Hero() {
             Trusted across {business.address.city}
           </motion.span>
 
-          <motion.h1
-            {...fadeUp(0.12)}
-            className="heading-display mt-7 text-5xl leading-[1.06] text-ink sm:text-6xl lg:text-7xl"
-          >
-            Healthy smiles,
-            <span className="block text-sky-600">without the dread.</span>
-          </motion.h1>
+          <h1 className="heading-display mt-7 text-5xl leading-[1.06] text-ink sm:text-6xl lg:text-7xl">
+            <TextReveal text="Healthy smiles," delay={0.12} />
+            <span className="block text-sky-600">
+              <TextReveal text="without the dread." delay={0.4} />
+            </span>
+          </h1>
 
           <motion.p
             {...fadeUp(0.24)}

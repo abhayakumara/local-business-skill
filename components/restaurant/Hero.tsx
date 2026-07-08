@@ -1,19 +1,39 @@
 'use client';
 
 import Image from 'next/image';
-import { motion, useReducedMotion } from 'framer-motion';
+import {
+  motion,
+  useReducedMotion,
+  useScroll,
+  useTransform,
+} from 'framer-motion';
+import { useRef } from 'react';
 import { business } from '@/content/restaurant';
+import { Ambient3D } from '@/components/ui/Ambient3D';
+import { TextReveal } from '@/components/ui/TextReveal';
 import { ArrowIcon, StarIcon } from './icons';
 
 export function Hero() {
   const reduce = useReducedMotion();
+  const ref = useRef<HTMLElement>(null);
+
+  // Depth on scroll: the photograph drifts slower than the page while the
+  // copy glides ahead and fades — a layered, cinematic exit.
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ['start start', 'end start'],
+  });
+  const bgY = useTransform(scrollYProgress, [0, 1], ['0%', '22%']);
+  const contentY = useTransform(scrollYProgress, [0, 1], ['0%', '34%']);
+  const contentFade = useTransform(scrollYProgress, [0, 0.75], [1, 0]);
 
   return (
-    <section className="relative flex min-h-[100svh] items-center overflow-hidden">
+    <section ref={ref} className="relative flex min-h-[100svh] items-center overflow-hidden">
       {/* Background photography */}
       {/* Slow cinematic push-in on load (skipped for reduced motion) */}
       <motion.div
         className="absolute inset-0"
+        style={reduce ? undefined : { y: bgY }}
         initial={reduce ? false : { scale: 1.08 }}
         animate={reduce ? undefined : { scale: 1 }}
         transition={{ duration: 2.4, ease: [0.21, 0.47, 0.32, 0.98] }}
@@ -37,6 +57,12 @@ export function Hero() {
         aria-hidden
       />
 
+      {/* Warm embers drifting up through the candlelight */}
+      <Ambient3D
+        variant="embers"
+        className="pointer-events-none absolute inset-0 z-[5]"
+      />
+
       {/* Floating glass accent */}
       {!reduce && (
         <motion.div
@@ -50,29 +76,44 @@ export function Hero() {
       <div className="container-page relative z-10 py-32">
         <motion.div
           className="max-w-3xl"
-          initial={reduce ? false : { opacity: 0, y: 28 }}
-          animate={reduce ? undefined : { opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: [0.21, 0.47, 0.32, 0.98] }}
+          style={reduce ? undefined : { y: contentY, opacity: contentFade }}
         >
-          <span className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-white backdrop-blur-sm">
+          <motion.span
+            initial={reduce ? false : { opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: [0.21, 0.47, 0.32, 0.98] }}
+            className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-white backdrop-blur-sm"
+          >
             <span className="flex gap-0.5 text-saffron-300" aria-hidden>
               {Array.from({ length: 5 }).map((_, i) => (
                 <StarIcon key={i} width={12} height={12} />
               ))}
             </span>
             Loved across {business.address.city}
-          </span>
+          </motion.span>
 
           <h1 className="heading-display mt-6 text-5xl leading-[1.05] text-white sm:text-6xl lg:text-7xl">
-            {business.tagline}
-            <span className="block text-saffron-300">worth the table.</span>
+            <TextReveal text={business.tagline} delay={0.15} />
+            <span className="block text-saffron-300">
+              <TextReveal text="worth the table." delay={0.45} />
+            </span>
           </h1>
 
-          <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/85">
+          <motion.p
+            initial={reduce ? false : { opacity: 0, y: 22 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.7, ease: [0.21, 0.47, 0.32, 0.98] }}
+            className="mt-6 max-w-xl text-lg leading-relaxed text-white/85"
+          >
             {business.description}
-          </p>
+          </motion.p>
 
-          <div className="mt-10 flex flex-wrap items-center gap-4">
+          <motion.div
+            initial={reduce ? false : { opacity: 0, y: 22 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.85, ease: [0.21, 0.47, 0.32, 0.98] }}
+            className="mt-10 flex flex-wrap items-center gap-4"
+          >
             <a href="#reserve" className="btn-primary text-base">
               Reserve a Table
               <ArrowIcon width={18} height={18} />
@@ -83,7 +124,7 @@ export function Hero() {
             >
               Explore the Menu
             </a>
-          </div>
+          </motion.div>
         </motion.div>
       </div>
 

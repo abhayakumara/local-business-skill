@@ -2,35 +2,15 @@
 
 import dynamic from 'next/dynamic';
 import { motion, useInView, useReducedMotion, useScroll, useTransform } from 'framer-motion';
-import { Component, useEffect, useRef, useState, type ReactNode } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { agency, heroStats } from '@/content/agency';
 import { Magnetic } from '@/components/ui/Magnetic';
 import { AnimatedCounter } from '@/components/ui/AnimatedCounter';
+import { supportsWebGL, ThreeErrorBoundary } from '@/components/ui/three';
 
 // Heavy 3D scene is code-split and only requested client-side after mount —
 // the hero paints instantly with the CSS aurora while three.js streams in.
 const Hero3D = dynamic(() => import('./Hero3D'), { ssr: false });
-
-// If WebGL is unavailable (or three.js throws), silently fall back to the
-// CSS aurora backdrop — the page must never crash over a decoration.
-class ThreeErrorBoundary extends Component<{ children: ReactNode }, { failed: boolean }> {
-  state = { failed: false };
-  static getDerivedStateFromError() {
-    return { failed: true };
-  }
-  render() {
-    return this.state.failed ? null : this.props.children;
-  }
-}
-
-function supportsWebGL(): boolean {
-  try {
-    const canvas = document.createElement('canvas');
-    return Boolean(canvas.getContext('webgl2') || canvas.getContext('webgl'));
-  } catch {
-    return false;
-  }
-}
 
 const HEADLINE = ['Websites', 'that', 'make', 'local', 'businesses'];
 

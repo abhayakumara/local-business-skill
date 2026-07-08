@@ -3,6 +3,8 @@
 import Image from 'next/image';
 import { motion, useReducedMotion } from 'framer-motion';
 import { business } from '@/content/salon';
+import { Ambient3D } from '@/components/ui/Ambient3D';
+import { TextReveal } from '@/components/ui/TextReveal';
 import { ArrowIcon, SparkleIcon, StarIcon } from './icons';
 
 // Salon hero: light, editorial split layout — copy on ivory, portrait in an
@@ -26,7 +28,13 @@ export function Hero() {
         <div className="absolute bottom-[-10rem] left-1/4 h-80 w-80 rounded-full bg-mauve-200/50 blur-[120px]" />
       </div>
 
-      <div className="container-page grid items-center gap-14 lg:grid-cols-[1.05fr_1fr] lg:gap-10">
+      {/* Blush petals drifting down across the hero */}
+      <Ambient3D
+        variant="petals"
+        className="pointer-events-none absolute inset-0 z-0"
+      />
+
+      <div className="container-page relative z-10 grid items-center gap-14 lg:grid-cols-[1.05fr_1fr] lg:gap-10">
         {/* Copy */}
         <div className="max-w-xl">
           <motion.span
@@ -41,15 +49,12 @@ export function Hero() {
             Loved across {business.address.city}
           </motion.span>
 
-          <motion.h1
-            {...fadeUp(0.12)}
-            className="heading-display mt-7 text-5xl leading-[1.06] text-ink sm:text-6xl lg:text-7xl"
-          >
-            Beauty, unhurried.
-            <span className="mt-1 block italic text-mauve-500">
+          <h1 className="heading-display mt-7 text-5xl leading-[1.06] text-ink sm:text-6xl lg:text-7xl">
+            <TextReveal text="Beauty, unhurried." delay={0.12} />
+            <motion.span {...fadeUp(0.45)} className="mt-1 block italic text-mauve-500">
               {business.tagline}.
-            </span>
-          </motion.h1>
+            </motion.span>
+          </h1>
 
           <motion.p
             {...fadeUp(0.24)}

@@ -1,18 +1,38 @@
 'use client';
 
 import Image from 'next/image';
-import { motion, useReducedMotion } from 'framer-motion';
+import {
+  motion,
+  useReducedMotion,
+  useScroll,
+  useTransform,
+} from 'framer-motion';
+import { useRef } from 'react';
 import { business } from '@/content/gym';
+import { Ambient3D } from '@/components/ui/Ambient3D';
+import { TextReveal } from '@/components/ui/TextReveal';
 import { ArrowIcon, StarIcon } from './icons';
 
 export function Hero() {
   const reduce = useReducedMotion();
+  const ref = useRef<HTMLElement>(null);
+
+  // Depth on scroll: the photograph drifts slower than the page while the
+  // copy charges ahead and fades out.
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ['start start', 'end start'],
+  });
+  const bgY = useTransform(scrollYProgress, [0, 1], ['0%', '22%']);
+  const contentY = useTransform(scrollYProgress, [0, 1], ['0%', '34%']);
+  const contentFade = useTransform(scrollYProgress, [0, 0.75], [1, 0]);
 
   return (
-    <section className="relative flex min-h-[100svh] items-center overflow-hidden">
+    <section ref={ref} className="relative flex min-h-[100svh] items-center overflow-hidden">
       {/* Slow cinematic push-in on load (skipped for reduced motion) */}
       <motion.div
         className="absolute inset-0"
+        style={reduce ? undefined : { y: bgY }}
         initial={reduce ? false : { scale: 1.08 }}
         animate={reduce ? undefined : { scale: 1 }}
         transition={{ duration: 2.4, ease: [0.21, 0.47, 0.32, 0.98] }}
@@ -36,6 +56,12 @@ export function Hero() {
         aria-hidden
       />
 
+      {/* Volt sparks + wireframe geometry charging the room */}
+      <Ambient3D
+        variant="energy"
+        className="pointer-events-none absolute inset-0 z-[5]"
+      />
+
       {!reduce && (
         <motion.div
           aria-hidden
@@ -48,29 +74,44 @@ export function Hero() {
       <div className="container-page relative z-10 py-32">
         <motion.div
           className="max-w-3xl"
-          initial={reduce ? false : { opacity: 0, y: 28 }}
-          animate={reduce ? undefined : { opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: [0.21, 0.47, 0.32, 0.98] }}
+          style={reduce ? undefined : { y: contentY, opacity: contentFade }}
         >
-          <span className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-white backdrop-blur-sm">
+          <motion.span
+            initial={reduce ? false : { opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: [0.21, 0.47, 0.32, 0.98] }}
+            className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-white backdrop-blur-sm"
+          >
             <span className="flex gap-0.5 text-volt-300" aria-hidden>
               {Array.from({ length: 5 }).map((_, i) => (
                 <StarIcon key={i} width={12} height={12} />
               ))}
             </span>
             Rated #1 in {business.address.city}
-          </span>
+          </motion.span>
 
           <h1 className="heading-display mt-6 text-6xl leading-[0.95] text-white sm:text-7xl lg:text-8xl">
-            Stronger
-            <span className="block text-volt-300">every week.</span>
+            <TextReveal text="Stronger" delay={0.15} />
+            <span className="block text-volt-300">
+              <TextReveal text="every week." delay={0.4} />
+            </span>
           </h1>
 
-          <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/85">
+          <motion.p
+            initial={reduce ? false : { opacity: 0, y: 22 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.65, ease: [0.21, 0.47, 0.32, 0.98] }}
+            className="mt-6 max-w-xl text-lg leading-relaxed text-white/85"
+          >
             {business.description}
-          </p>
+          </motion.p>
 
-          <div className="mt-10 flex flex-wrap items-center gap-4">
+          <motion.div
+            initial={reduce ? false : { opacity: 0, y: 22 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.8, ease: [0.21, 0.47, 0.32, 0.98] }}
+            className="mt-10 flex flex-wrap items-center gap-4"
+          >
             <a href="#join" className="btn-volt text-base">
               Claim Your Free Class
               <ArrowIcon width={18} height={18} />
@@ -81,11 +122,16 @@ export function Hero() {
             >
               See the Programs
             </a>
-          </div>
+          </motion.div>
 
-          <p className="mt-6 text-sm font-medium uppercase tracking-wide text-white/70">
+          <motion.p
+            initial={reduce ? false : { opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 1 }}
+            className="mt-6 text-sm font-medium uppercase tracking-wide text-white/70"
+          >
             No lock-in contracts · First class free · All levels welcome
-          </p>
+          </motion.p>
         </motion.div>
       </div>
 

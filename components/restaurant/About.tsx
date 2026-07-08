@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { Parallax } from '@/components/ui/Parallax';
 import { Reveal } from '@/components/ui/Reveal';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { AnimatedCounter } from '@/components/ui/AnimatedCounter';
@@ -15,15 +16,17 @@ export function About() {
       <div className="container-page grid items-center gap-14 lg:grid-cols-2">
         {/* Imagery with layered depth */}
         <Reveal className="relative">
-          <div className="relative aspect-[4/5] overflow-hidden rounded-4xl shadow-lift">
-            <Image
-              src="/images/restaurant/about-chef.svg"
-              alt="Head chef plating a dish in the open kitchen"
-              fill
-              sizes="(min-width: 1024px) 50vw, 100vw"
-              className="object-cover"
-            />
-          </div>
+          <Parallax drift={36}>
+            <div className="relative aspect-[4/5] overflow-hidden rounded-4xl shadow-lift">
+              <Image
+                src="/images/restaurant/about-chef.svg"
+                alt="Head chef plating a dish in the open kitchen"
+                fill
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                className="object-cover"
+              />
+            </div>
+          </Parallax>
           <div className="absolute -bottom-6 -right-4 hidden w-48 rounded-3xl bg-white p-5 shadow-soft sm:block">
             <p className="heading-display text-3xl text-saffron-600">est. 2009</p>
             <p className="mt-1 text-sm text-charcoal/60">

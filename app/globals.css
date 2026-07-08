@@ -144,8 +144,26 @@
   }
 
   .btn {
-    @apply inline-flex items-center justify-center gap-2 rounded-full px-7 py-3 text-sm font-semibold transition-all duration-300 focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2;
+    @apply relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full px-7 py-3 text-sm font-semibold transition-all duration-300 focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2;
     touch-action: manipulation; /* kills the 300ms double-tap delay on mobile */
+  }
+  /* Light-sweep sheen gliding across every button on hover. */
+  .btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      105deg,
+      transparent 38%,
+      rgb(255 255 255 / 0.32) 50%,
+      transparent 62%
+    );
+    transform: translateX(-140%);
+    transition: transform 0.7s cubic-bezier(0.21, 0.47, 0.32, 0.98);
+    pointer-events: none;
+  }
+  .btn:hover::before {
+    transform: translateX(140%);
   }
 
   .theme-restaurant .btn-primary {
