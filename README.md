@@ -25,9 +25,13 @@ A floating showcase bar on every demo lets prospects hop between industries
 - **Next.js 14** (App Router) + **TypeScript**, fully statically prerendered
 - **Tailwind CSS** — one design system, five brands via CSS-variable theming
 - **Framer Motion** — scroll reveals, staggered headlines, magnetic buttons,
-  tilt cards, animated counters, cinematic hero push-ins, marquees
-- **React Three Fiber** — interactive 3D hero on the landing page
-  (lazy-loaded, WebGL-gated, wrapped in an error boundary, skipped for
+  tilt cards, animated counters, cinematic hero push-ins, marquees,
+  depth-staged hero parallax, scroll-drawn process line
+- **Lenis** — buttery inertial scrolling site-wide (anchor-aware, disabled
+  for `prefers-reduced-motion`)
+- **React Three Fiber** — interactive 3D hero on the landing page with
+  iridescent glass shapes and a revolving particle field (lazy-loaded,
+  WebGL-gated, wrapped in an error boundary, skipped for
   `prefers-reduced-motion`)
 - **SEO** — per-route metadata + Open Graph, industry JSON-LD
   (`Restaurant`, `BeautySalon`, `Dentist`, `ExerciseGym`,
@@ -70,13 +74,13 @@ app/
     layout.tsx          per-demo theme wrapper, font, metadata, JSON-LD
     page.tsx            the demo one-pager
 components/
-  agency/               landing page sections (Hero, Showcase, Pricing, …)
+  agency/               landing page sections (Hero, Showcase, Process, …)
   restaurant|salon|dental|gym/   demo sections
   ui/                   shared primitives: Reveal, SectionHeading, Magnetic,
                         TiltCard, AnimatedCounter, Marquee, ShowcaseBar,
                         social icons
 content/
-  agency.ts             ← landing page copy, demos, pricing, FAQs
+  agency.ts             ← landing page copy, demos, FAQs
   restaurant|salon|dental|gym/  ← per-demo business content (personalize here)
 lib/
   types.ts              content type definitions (guard rails for editors)

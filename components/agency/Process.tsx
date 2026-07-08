@@ -1,8 +1,23 @@
+'use client';
+
+import { useRef } from 'react';
+import { motion, useReducedMotion, useScroll, useSpring } from 'framer-motion';
 import { processSteps } from '@/content/agency';
 import { Reveal } from '@/components/ui/Reveal';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 
 export function Process() {
+  const reduce = useReducedMotion();
+
+  // The connector line draws itself from Discover to Grow as the section
+  // scrolls through the viewport — progress you can feel.
+  const listRef = useRef<HTMLOListElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: listRef,
+    offset: ['start 0.85', 'start 0.35'],
+  });
+  const scaleX = useSpring(scrollYProgress, { stiffness: 65, damping: 20, mass: 0.6 });
+
   return (
     <section id="process" className="relative scroll-mt-24 py-28 sm:py-36">
       <div className="container-page flex flex-col gap-16">
@@ -12,11 +27,16 @@ export function Process() {
           description="A process built for busy owners: one call, one focused review, zero homework. You keep running the business — we handle everything else."
         />
 
-        <ol className="relative grid gap-10 lg:grid-cols-4 lg:gap-6">
-          {/* Connecting line (desktop) */}
+        <ol ref={listRef} className="relative grid gap-10 lg:grid-cols-4 lg:gap-6">
+          {/* Connecting line (desktop): faint track + scroll-drawn gradient */}
           <span
             aria-hidden
-            className="absolute left-0 right-0 top-7 hidden h-px bg-gradient-to-r from-transparent via-white/20 to-transparent lg:block"
+            className="absolute left-0 right-0 top-7 hidden h-px bg-white/10 lg:block"
+          />
+          <motion.span
+            aria-hidden
+            style={reduce ? undefined : { scaleX }}
+            className="absolute left-0 right-0 top-7 hidden h-px origin-left bg-gradient-to-r from-aurora-violet via-aurora-iris to-aurora-cyan lg:block"
           />
           {processSteps.map((step, i) => (
             <Reveal key={step.id} as="li" delay={i * 0.12} className="relative flex flex-col gap-4">

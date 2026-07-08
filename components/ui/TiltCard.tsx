@@ -69,7 +69,7 @@ export function TiltCard({ children, className, tilt = 7, glare = true }: TiltCa
       {glare && !reduce && (
         <motion.span
           aria-hidden
-          className="pointer-events-none absolute inset-0 rounded-[inherit] opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+          className="pointer-events-none absolute inset-0 rounded-[inherit] opacity-0 transition-opacity duration-300 [transform:translateZ(48px)] group-hover:opacity-100"
           style={{ background: glareBg }}
         />
       )}

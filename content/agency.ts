@@ -1,7 +1,7 @@
 // ─────────────────────────────────────────────────────────────────────────────
 // AGENCY LANDING PAGE CONTENT
 // Everything on the landing page is editable here — brand, copy, demos,
-// pricing, FAQs. Components never hard-code business copy.
+// FAQs. Components never hard-code business copy.
 // ─────────────────────────────────────────────────────────────────────────────
 
 export const agency = {
@@ -222,66 +222,6 @@ export const agencyTestimonials: AgencyTestimonial[] = [
   },
 ];
 
-export interface PricingTier {
-  id: string;
-  name: string;
-  price: string;
-  cadence: string;
-  description: string;
-  perks: string[];
-  isFeatured?: boolean;
-  ctaLabel: string;
-}
-
-export const pricingTiers: PricingTier[] = [
-  {
-    id: 'launch',
-    name: 'Launch',
-    price: '₹49,000',
-    cadence: 'one-time',
-    description: 'Everything a local business needs to look world-class online.',
-    perks: [
-      'Custom one-page website',
-      'Mobile-first, 95+ Lighthouse',
-      'Local SEO & structured data',
-      'Booking / enquiry form',
-      'Launched in 7 days',
-    ],
-    ctaLabel: 'Start with Launch',
-  },
-  {
-    id: 'growth',
-    name: 'Growth',
-    price: '₹99,000',
-    cadence: 'one-time',
-    description: 'The full brand treatment for businesses ready to lead their market.',
-    perks: [
-      'Everything in Launch',
-      'Multi-section site with gallery & team',
-      'Conversion copywriting',
-      'Photography art direction',
-      'Google Business optimization',
-      '30 days of post-launch tweaks',
-    ],
-    isFeatured: true,
-    ctaLabel: 'Choose Growth',
-  },
-  {
-    id: 'partner',
-    name: 'Partner',
-    price: '₹9,900',
-    cadence: 'per month',
-    description: 'We run your web presence so you can run the business.',
-    perks: [
-      'Hosting, updates & monitoring',
-      'Same-day content edits',
-      'Seasonal campaign pages',
-      'Quarterly growth review',
-    ],
-    ctaLabel: 'Become a partner',
-  },
-];
-
 export interface AgencyFaq {
   id: string;
   question: string;
@@ -293,7 +233,7 @@ export const agencyFaqs: AgencyFaq[] = [
     id: 'timeline',
     question: 'How fast can you really launch?',
     answer:
-      'Seven days is our standard for a Launch site: discovery Monday, design concept by Wednesday, live by the following Monday. Growth projects typically take two to three weeks depending on photography and content.',
+      'Seven days is our standard for a focused site: discovery Monday, design concept by Wednesday, live by the following Monday. Larger multi-section projects typically take two to three weeks depending on photography and content.',
   },
   {
     id: 'content',
@@ -311,7 +251,7 @@ export const agencyFaqs: AgencyFaq[] = [
     id: 'updates',
     question: 'How do we update the menu / prices / hours later?',
     answer:
-      'Every site is built content-first: your menu, services, hours and photos live in simple, clearly-labelled files. On a Partner plan we make edits same-day; otherwise we hand you a 10-minute guide.',
+      'Every site is built content-first: your menu, services, hours and photos live in simple, clearly-labelled files. On a care plan we make edits same-day; otherwise we hand you a 10-minute guide.',
   },
   {
     id: 'seo',
@@ -331,7 +271,6 @@ export const footerNav = [
   { href: '#work', label: 'Work' },
   { href: '#services', label: 'Services' },
   { href: '#process', label: 'Process' },
-  { href: '#pricing', label: 'Pricing' },
   { href: '#faq', label: 'FAQ' },
   { href: '#contact', label: 'Contact' },
 ];

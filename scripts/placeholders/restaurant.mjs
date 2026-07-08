@@ -137,7 +137,7 @@ function sceneSvg(name, sub, w = 900, h = 700) {
 
 function heroSvg(w = 1920, h = 1080) {
   const p = palettes[2];
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="img" aria-label="Saffron & Sage dining room at dusk">
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="img" aria-label="Saffron &amp; Sage dining room at dusk">
   <defs>
     <linearGradient id="hb" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#3a1c08"/><stop offset="0.45" stop-color="#7f3a15"/><stop offset="0.8" stop-color="#bf5f0f"/><stop offset="1" stop-color="#9c4711"/>
@@ -163,7 +163,7 @@ function heroSvg(w = 1920, h = 1080) {
 
 function ogSvg(w = 1200, h = 630) {
   const p = palettes[2];
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="img" aria-label="Saffron & Sage — A Modern Indian Kitchen">
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="img" aria-label="Saffron &amp; Sage — A Modern Indian Kitchen">
   <defs>
     <linearGradient id="ob" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4a2409"/><stop offset="0.6" stop-color="#9c4711"/><stop offset="1" stop-color="#bf5f0f"/></linearGradient>
     <radialGradient id="og1" cx="0.85" cy="0.4" r="0.5"><stop offset="0" stop-color="#f9e7c8" stop-opacity="0.7"/><stop offset="1" stop-color="#f9e7c8" stop-opacity="0"/></radialGradient>

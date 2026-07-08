@@ -5,7 +5,6 @@ import { Showcase } from '@/components/agency/Showcase';
 import { Services } from '@/components/agency/Services';
 import { Process } from '@/components/agency/Process';
 import { Testimonials } from '@/components/agency/Testimonials';
-import { Pricing } from '@/components/agency/Pricing';
 import { FAQ } from '@/components/agency/FAQ';
 import { Contact } from '@/components/agency/Contact';
 import { Footer } from '@/components/agency/Footer';
@@ -25,7 +24,6 @@ export default function AgencyHome() {
         <Services />
         <Process />
         <Testimonials />
-        <Pricing />
         <FAQ />
         <Contact />
       </main>

@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { Inter, Space_Grotesk } from 'next/font/google';
 import { siteUrl } from '@/lib/site';
+import { SmoothScroll } from '@/components/ui/SmoothScroll';
 import './globals.css';
 
 const body = Inter({
@@ -75,6 +76,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${body.variable} ${display.variable}`}>
       <body>
+        <SmoothScroll />
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-zinc-950 focus:px-5 focus:py-2 focus:text-sm focus:font-semibold focus:text-white focus:ring-2 focus:ring-violet-400"

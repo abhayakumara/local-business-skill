@@ -162,7 +162,7 @@ function heroSvg(w = 1920, h = 1080) {
 }
 
 function ogSvg(w = 1200, h = 630) {
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="img" aria-label="Maison Lumière — Hair, Skin & Sanctuary">
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="img" aria-label="Maison Lumière — Hair, Skin &amp; Sanctuary">
   <defs>
     <linearGradient id="ob" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3a2836"/><stop offset="0.6" stop-color="#744a6b"/><stop offset="1" stop-color="#8d5e82"/></linearGradient>
     <radialGradient id="og1" cx="0.85" cy="0.35" r="0.5"><stop offset="0" stop-color="#f4e7c9" stop-opacity="0.6"/><stop offset="1" stop-color="#f4e7c9" stop-opacity="0"/></radialGradient>

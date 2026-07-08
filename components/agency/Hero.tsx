@@ -1,8 +1,8 @@
 'use client';
 
 import dynamic from 'next/dynamic';
-import { motion, useReducedMotion } from 'framer-motion';
-import { Component, useEffect, useState, type ReactNode } from 'react';
+import { motion, useInView, useReducedMotion, useScroll, useTransform } from 'framer-motion';
+import { Component, useEffect, useRef, useState, type ReactNode } from 'react';
 import { agency, heroStats } from '@/content/agency';
 import { Magnetic } from '@/components/ui/Magnetic';
 import { AnimatedCounter } from '@/components/ui/AnimatedCounter';
@@ -41,6 +41,25 @@ export function Hero() {
     setShow3d(supportsWebGL());
   }, []);
 
+  // Depth-staged parallax: as the visitor scrolls away, the 3D scene sinks
+  // and dissolves, the aurora drifts at a middle rate, and the copy trails
+  // last — three layers moving apart is what sells the depth.
+  const sectionRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ['start start', 'end start'],
+  });
+  // Once the hero has fully scrolled away the canvas is invisible — halt its
+  // render loop so the GPU/main thread is free for the rest of the page. The
+  // margin resumes it a beat before re-entry, so no blank first frame.
+  const heroInView = useInView(sectionRef, { margin: '120px' });
+
+  const sceneY = useTransform(scrollYProgress, [0, 1], [0, 190]);
+  const sceneOpacity = useTransform(scrollYProgress, [0, 0.75], [0.7, 0]);
+  const auroraY = useTransform(scrollYProgress, [0, 1], [0, 120]);
+  const contentY = useTransform(scrollYProgress, [0, 1], [0, 70]);
+  const contentOpacity = useTransform(scrollYProgress, [0.15, 0.9], [1, 0]);
+
   const container = {
     hidden: {},
     show: { transition: { staggerChildren: 0.08, delayChildren: 0.15 } },
@@ -56,24 +75,38 @@ export function Hero() {
   };
 
   return (
-    <section className="noise relative flex min-h-screen flex-col justify-center overflow-hidden pb-24 pt-32 sm:pt-36">
+    <section
+      ref={sectionRef}
+      className="noise relative flex min-h-screen flex-col justify-center overflow-hidden pb-24 pt-32 sm:pt-36"
+    >
       {/* Aurora wash */}
-      <div aria-hidden className="absolute inset-0 -z-10">
+      <motion.div
+        aria-hidden
+        className="absolute inset-0 -z-10"
+        style={reduce ? undefined : { y: auroraY }}
+      >
         <div className="absolute -left-40 -top-40 h-[34rem] w-[34rem] animate-aurora rounded-full bg-aurora-violet/25 blur-[120px]" />
         <div className="absolute -right-32 top-24 h-[28rem] w-[28rem] animate-aurora rounded-full bg-aurora-cyan/15 blur-[110px] [animation-delay:-6s]" />
         <div className="absolute bottom-[-12rem] left-1/3 h-[30rem] w-[30rem] animate-aurora rounded-full bg-aurora-iris/20 blur-[130px] [animation-delay:-12s]" />
-      </div>
+      </motion.div>
 
       {/* Interactive 3D layer */}
       {show3d && !reduce && (
-        <div aria-hidden className="absolute inset-0 -z-[5] opacity-70">
+        <motion.div
+          aria-hidden
+          className="absolute inset-0 -z-[5]"
+          style={{ y: sceneY, opacity: sceneOpacity }}
+        >
           <ThreeErrorBoundary>
-            <Hero3D />
+            <Hero3D active={heroInView} />
           </ThreeErrorBoundary>
-        </div>
+        </motion.div>
       )}
 
-      <div className="container-page relative">
+      <motion.div
+        className="container-page relative"
+        style={reduce ? undefined : { y: contentY, opacity: contentOpacity }}
+      >
         <motion.p
           initial={reduce ? false : { opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
@@ -149,7 +182,7 @@ export function Hero() {
             </div>
           ))}
         </motion.dl>
-      </div>
+      </motion.div>
 
       {/* Scroll hint */}
       <motion.a

@@ -29,17 +29,27 @@ export function Showcase() {
         <div className="grid gap-8 md:grid-cols-2">
           {demoSites.map((demo, i) => (
             <Reveal key={demo.slug} delay={i * 0.08} className="h-full">
+              {/* No overflow-hidden on the card itself — clipping would flatten
+                  the 3D context and kill the preview's translateZ pop. */}
               <TiltCard
                 tilt={4}
-                className="group relative h-full overflow-hidden rounded-4xl border border-white/10 bg-white/[0.03]"
+                className="group relative h-full rounded-4xl [transform-style:preserve-3d]"
               >
                 <Link
                   href={`/${demo.slug}`}
-                  className="flex h-full flex-col focus-visible:outline-none"
+                  className="flex h-full flex-col rounded-4xl [transform-style:preserve-3d] focus-visible:outline-none"
                   aria-label={`View the ${demo.name} ${demo.industry.toLowerCase()} demo`}
                 >
-                  {/* Browser-chrome preview */}
-                  <div className={`relative bg-gradient-to-br p-5 pb-0 sm:p-7 sm:pb-0 ${demo.wash}`}>
+                  {/* Backplate */}
+                  <span
+                    aria-hidden
+                    className="absolute inset-0 rounded-4xl border border-white/10 bg-white/[0.03] transition-all duration-500 group-hover:border-aurora-violet/40 group-hover:shadow-glow"
+                  />
+
+                  {/* Browser-chrome preview — lifts off the card plane on hover */}
+                  <div
+                    className={`relative overflow-hidden rounded-t-4xl bg-gradient-to-br p-5 pb-0 transition-transform duration-500 ease-out group-hover:[transform:translateZ(36px)] sm:p-7 sm:pb-0 ${demo.wash}`}
+                  >
                     <div className="overflow-hidden rounded-t-2xl border border-white/10 border-b-0 shadow-2xl">
                       <div className="flex items-center gap-1.5 bg-zinc-900/90 px-4 py-2.5">
                         <span className="h-2.5 w-2.5 rounded-full bg-white/15" aria-hidden />
@@ -61,7 +71,9 @@ export function Showcase() {
                     </div>
                   </div>
 
-                  <div className="flex flex-1 flex-col gap-4 p-6 sm:p-8">
+                  {/* Content plane rises less than the preview (36px), so the
+                      two layers visibly separate instead of moving as one. */}
+                  <div className="relative flex flex-1 flex-col gap-4 p-6 transition-transform duration-500 ease-out group-hover:[transform:translateZ(18px)] sm:p-8">
                     <div className="flex items-center justify-between gap-4">
                       <p className={`text-xs font-semibold uppercase tracking-[0.22em] ${demo.accent}`}>
                         {demo.industry}
