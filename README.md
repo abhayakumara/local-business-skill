@@ -1,4 +1,4 @@
-# Lumen Studio — Local Business Website Showcase
+# A Studios — Local Business Website Showcase
 
 One Next.js application, five experiences: a premium **agency landing page**
 plus a complete, production-ready **demo website for each industry** — all
@@ -9,7 +9,7 @@ industry, and show them their future website.
 
 | Route | What it is | Brand | Signature section |
 |-------|------------|-------|-------------------|
-| `/` | Agency landing page | **Lumen Studio** — dark, aurora gradients, interactive 3D hero | Live demo gallery |
+| `/` | Agency landing page | **A Studios** — dark, aurora gradients, interactive 3D hero | Live demo gallery |
 | `/restaurant` | Restaurant demo | **Saffron & Sage** — saffron / sage, Cormorant | Filterable menu |
 | `/salon` | Salon & spa demo | **Maison Lumière** — mauve / gold, Cormorant | Treatment menu + team |
 | `/dental` | Dental practice demo | **Northway Dental Studio** — sky / mint, Fraunces | Insurance & payment band |

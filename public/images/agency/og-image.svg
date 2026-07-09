@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Lumen Studio — Websites that win local customers">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="A Studios — Websites that win local customers">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#0d0d17"/>
@@ -21,7 +21,7 @@
   <rect width="1200" height="630" fill="url(#glow1)"/>
   <rect width="1200" height="630" fill="url(#glow2)"/>
   <path d="M96 120v90h70" fill="none" stroke="url(#mark)" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
-  <text x="96" y="330" font-family="Arial, sans-serif" font-size="76" font-weight="800" fill="#ffffff">Lumen Studio</text>
+  <text x="96" y="330" font-family="Arial, sans-serif" font-size="76" font-weight="800" fill="#ffffff">A Studios</text>
   <text x="98" y="396" font-family="Arial, sans-serif" font-size="34" font-weight="500" fill="#a5b4fc">Websites that win local customers</text>
   <text x="98" y="500" font-family="Arial, sans-serif" font-size="24" fill="#71717a">Restaurants · Salons · Dental · Fitness — explore the live demos</text>
 </svg>

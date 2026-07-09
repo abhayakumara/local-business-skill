@@ -20,11 +20,11 @@ const display = Space_Grotesk({
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'Lumen Studio — Websites that win local customers',
-    template: '%s · Lumen Studio',
+    default: 'A Studios — Websites that win local customers',
+    template: '%s · A Studios',
   },
   description:
-    'Lumen Studio designs premium, conversion-focused websites for local businesses — restaurants, salons, dental practices, gyms and more. Explore live demos of our work.',
+    'A Studios designs premium, conversion-focused websites for local businesses — restaurants, salons, dental practices, gyms and more. Explore live demos of our work.',
   keywords: [
     'web design agency',
     'local business websites',
@@ -33,13 +33,13 @@ export const metadata: Metadata = {
     'salon website design',
     'gym website design',
   ],
-  authors: [{ name: 'Lumen Studio' }],
+  authors: [{ name: 'A Studios' }],
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: siteUrl,
-    siteName: 'Lumen Studio',
-    title: 'Lumen Studio — Websites that win local customers',
+    siteName: 'A Studios',
+    title: 'A Studios — Websites that win local customers',
     description:
       'Premium, conversion-focused websites for local businesses. Explore live demos for restaurants, salons, dental practices and gyms.',
     images: [
@@ -47,13 +47,13 @@ export const metadata: Metadata = {
         url: '/images/agency/og-image.svg',
         width: 1200,
         height: 630,
-        alt: 'Lumen Studio — Websites that win local customers',
+        alt: 'A Studios — Websites that win local customers',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Lumen Studio — Websites that win local customers',
+    title: 'A Studios — Websites that win local customers',
     description:
       'Premium, conversion-focused websites for local businesses. Explore live demos.',
     images: ['/images/agency/og-image.svg'],

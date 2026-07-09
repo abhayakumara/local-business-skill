@@ -5,11 +5,11 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 export const agency = {
-  name: 'Lumen Studio',
+  name: 'A Studios',
   tagline: 'Websites that win local customers',
   description:
     'We design and build premium, conversion-focused websites for local businesses — restaurants, salons, dental practices, gyms and more. Every site is fast, beautiful on every screen, and engineered to turn visitors into bookings.',
-  email: 'hello@lumen.studio',
+  email: 'hello@astudios.com',
   phone: '+91 80 4711 2345',
   city: 'Bengaluru, India',
 };
